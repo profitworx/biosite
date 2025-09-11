@@ -27,7 +27,7 @@ export default function Home() {
           <div className="flex flex-wrap justify-center gap-2 mb-6">
             <Badge variant="secondary">Semantic Interface Architecture</Badge>
             <Badge variant="secondary">Metacognitive System Design</Badge>
-            <Badge variant="secondary">Intent Modeling & Alignment</Badge>
+            <Badge variant="secondary">Intent Modeling &amp; Alignment</Badge>
             <Badge variant="secondary">XEMATIX Framework</Badge>
           </div>
           
@@ -182,7 +182,7 @@ export default function Home() {
 
               <Card className="hover:shadow-lg transition-shadow border-primary/10">
                 <CardHeader className="pb-2">
-                  <CardTitle className="text-lg">Blog & Insights</CardTitle>
+                  <CardTitle className="text-lg">Blog &amp; Insights</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-sm text-muted-foreground mb-4">
@@ -232,7 +232,7 @@ export default function Home() {
               </div>
               <Separator />
               <div>
-                <h3 className="font-semibold">Founder & Strategist • ProfitWorx</h3>
+                <h3 className="font-semibold">Founder &amp; Strategist • ProfitWorx</h3>
                 <p className="text-sm text-muted-foreground">May 2008 - Present (17+ years)</p>
                 <p className="text-sm mt-2 text-muted-foreground">
                   Strategic consulting in semantic SEO, content engineering, and digital systems. 
@@ -241,7 +241,7 @@ export default function Home() {
               </div>
               <Separator />
               <div>
-                <h3 className="font-semibold">Head of Product & Business Development • PageMatix</h3>
+                <h3 className="font-semibold">Head of Product &amp; Business Development • PageMatix</h3>
                 <p className="text-sm text-muted-foreground">March 2018 - Present (7+ years)</p>
                 <p className="text-sm mt-2 text-muted-foreground">
                   Microsite platform empowering professionals to launch personal brands using CAM framework principles.
@@ -276,7 +276,7 @@ export default function Home() {
               </div>
               <Separator />
               <div>
-                <h3 className="font-semibold mb-2">Digital Systems & Automation</h3>
+                <h3 className="font-semibold mb-2">Digital Systems &amp; Automation</h3>
                 <div className="flex flex-wrap gap-1">
                   <Badge variant="outline" className="text-xs">Schema Design</Badge>
                   <Badge variant="outline" className="text-xs">Google Apps Script</Badge>
@@ -287,7 +287,7 @@ export default function Home() {
               </div>
               <Separator />
               <div>
-                <h3 className="font-semibold mb-2">Strategic Consulting & SEO</h3>
+                <h3 className="font-semibold mb-2">Strategic Consulting &amp; SEO</h3>
                 <div className="flex flex-wrap gap-1">
                   <Badge variant="outline" className="text-xs">Semantic SEO</Badge>
                   <Badge variant="outline" className="text-xs">Content Engineering</Badge>
@@ -297,7 +297,7 @@ export default function Home() {
               </div>
               <Separator />
               <div>
-                <h3 className="font-semibold mb-2">Engineering & Technical</h3>
+                <h3 className="font-semibold mb-2">Engineering &amp; Technical</h3>
                 <div className="flex flex-wrap gap-1">
                   <Badge variant="outline" className="text-xs">Instrumentation Design</Badge>
                   <Badge variant="outline" className="text-xs">CAD Systems</Badge>
@@ -315,12 +315,12 @@ export default function Home() {
             </CardHeader>
             <CardContent className="space-y-6">
               <div>
-                <h3 className="font-semibold">Bachelor of Arts - Business Administration & Project Management</h3>
+                <h3 className="font-semibold">Bachelor of Arts - Business Administration &amp; Project Management</h3>
                 <p className="text-sm text-muted-foreground">The University of Western Australia • 2005 - 2006</p>
               </div>
               <Separator />
               <div>
-                <h3 className="font-semibold">Bachelor of Arts - Law & Politics</h3>
+                <h3 className="font-semibold">Bachelor of Arts - Law &amp; Politics</h3>
                 <p className="text-sm text-muted-foreground">University of South Africa • 2002 - 2005</p>
               </div>
               <Separator />
@@ -334,7 +334,7 @@ export default function Home() {
           {/* Recent Insights */}
           <Card className="col-span-full">
             <CardHeader>
-              <CardTitle className="text-xl">Current R&D & Thought Leadership</CardTitle>
+              <CardTitle className="text-xl">Current R&amp;D &amp; Thought Leadership</CardTitle>
               <CardDescription>
                 Exploring the intersection of semantic systems, cognitive modeling, and human-computer interaction
               </CardDescription>
