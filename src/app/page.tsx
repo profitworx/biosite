@@ -80,140 +80,140 @@ export default function Home() {
             </CardContent>
           </Card>
 
-        {/* Featured Highlights Section */}
-        <Card className="col-span-full bg-gradient-to-br from-primary/5 via-primary/3 to-primary/5 border-primary/20">
-          <CardHeader className="text-center">
-            <CardTitle className="text-3xl font-bold bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
-              Design Systems That Think Like You Do
-            </CardTitle>
-            <CardDescription className="text-lg text-foreground/80 max-w-3xl mx-auto">
-              From alignment to execution - where language becomes logic.
-            </CardDescription>
-          </CardHeader>
-          <CardContent className="space-y-6">
-            <div className="text-center max-w-4xl mx-auto space-y-4">
-              <p className="text-muted-foreground leading-relaxed">
-                <strong>Visibility is no longer the metric that matters. Alignment is the new foundation of intelligence.</strong>
-              </p>
-              <p className="text-muted-foreground leading-relaxed">
-                Digital Thought Leadership is evolving—from content and visibility toward semantic structure and cognitive clarity. 
-                My work sits at the intersection of interface logic and intentional system design, helping thinkers, technologists, 
-                and builders structure systems that scale meaning—not just output.
-              </p>
-              
-              <div className="my-8 flex justify-center">
-                <img 
-                  src="/images/john-deacon-featured.png" 
-                  alt="John Deacon - Cognitive Systems Architect"
-                  className="rounded-lg shadow-lg max-w-md w-full h-auto border border-primary/20"
-                />
+          {/* Featured Highlights Section */}
+          <Card className="col-span-full bg-gradient-to-br from-primary/5 via-primary/3 to-primary/5 border-primary/20">
+            <CardHeader className="text-center">
+              <CardTitle className="text-3xl font-bold bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
+                Design Systems That Think Like You Do
+              </CardTitle>
+              <CardDescription className="text-lg text-foreground/80 max-w-3xl mx-auto">
+                From alignment to execution - where language becomes logic.
+              </CardDescription>
+            </CardHeader>
+            <CardContent className="space-y-6">
+              <div className="text-center max-w-4xl mx-auto space-y-4">
+                <p className="text-muted-foreground leading-relaxed">
+                  <strong>Visibility is no longer the metric that matters. Alignment is the new foundation of intelligence.</strong>
+                </p>
+                <p className="text-muted-foreground leading-relaxed">
+                  Digital Thought Leadership is evolving—from content and visibility toward semantic structure and cognitive clarity. 
+                  My work sits at the intersection of interface logic and intentional system design, helping thinkers, technologists, 
+                  and builders structure systems that scale meaning—not just output.
+                </p>
+                
+                <div className="my-8 flex justify-center">
+                  <img 
+                    src="/images/john-deacon-featured.png" 
+                    alt="John Deacon - Cognitive Systems Architect"
+                    className="rounded-lg shadow-lg max-w-md w-full h-auto border border-primary/20"
+                  />
+                </div>
+                
+                <p className="text-muted-foreground leading-relaxed">
+                  If you&apos;re driven by ideas that deserve semantic structure and intelligent execution, 
+                  you&apos;re already thinking like a cognitive architect. I help you build it—strategically, structurally, and systemically.
+                </p>
               </div>
               
-              <p className="text-muted-foreground leading-relaxed">
-                If you're driven by ideas that deserve semantic structure and intelligent execution, 
-                you're already thinking like a cognitive architect. I help you build it—strategically, structurally, and systemically.
-              </p>
-            </div>
-            
-            <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3 mt-8">
-              <Card className="hover:shadow-lg transition-shadow border-primary/10">
-                <CardHeader className="pb-2">
-                  <CardTitle className="text-lg">XEMATIX Architecture</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-sm text-muted-foreground mb-4">
-                    Cognitive interface architecture that bridges natural language, structured logic, and contextual reasoning.
-                  </p>
-                  <Button variant="outline" className="w-full" asChild>
-                    <a href="#xematix">
-                      Explore XEMATIX &rarr;
-                    </a>
-                  </Button>
-                </CardContent>
-              </Card>
+              <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3 mt-8">
+                <Card className="hover:shadow-lg transition-shadow border-primary/10">
+                  <CardHeader className="pb-2">
+                    <CardTitle className="text-lg">XEMATIX Architecture</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-sm text-muted-foreground mb-4">
+                      Cognitive interface architecture that bridges natural language, structured logic, and contextual reasoning.
+                    </p>
+                    <Button variant="outline" className="w-full" asChild>
+                      <a href="#xematix">
+                        Explore XEMATIX &rarr;
+                      </a>
+                    </Button>
+                  </CardContent>
+                </Card>
 
-              <Card className="hover:shadow-lg transition-shadow border-primary/10">
-                <CardHeader className="pb-2">
-                  <CardTitle className="text-lg">CAM Framework</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-sm text-muted-foreground mb-4">
-                    Core Alignment Model - a metacognitive framework for structuring Mission, Vision, Strategy, and Tactics.
-                  </p>
-                  <Button variant="outline" className="w-full" asChild>
-                    <a href="#cam-guide">
-                      Learn CAM &rarr;
-                    </a>
-                  </Button>
-                </CardContent>
-              </Card>
+                <Card className="hover:shadow-lg transition-shadow border-primary/10">
+                  <CardHeader className="pb-2">
+                    <CardTitle className="text-lg">CAM Framework</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-sm text-muted-foreground mb-4">
+                      Core Alignment Model - a metacognitive framework for structuring Mission, Vision, Strategy, and Tactics.
+                    </p>
+                    <Button variant="outline" className="w-full" asChild>
+                      <a href="#cam-guide">
+                        Learn CAM &rarr;
+                      </a>
+                    </Button>
+                  </CardContent>
+                </Card>
 
-              <Card className="hover:shadow-lg transition-shadow border-primary/10">
-                <CardHeader className="pb-2">
-                  <CardTitle className="text-lg">DTLM System</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-sm text-muted-foreground mb-4">
-                    Digital Thought Leadership Model for creating meaningful influence through aligned systems.
-                  </p>
-                  <Button variant="outline" className="w-full" asChild>
-                    <a href="#dtlm">
-                      Discover DTLM &rarr;
-                    </a>
-                  </Button>
-                </CardContent>
-              </Card>
+                <Card className="hover:shadow-lg transition-shadow border-primary/10">
+                  <CardHeader className="pb-2">
+                    <CardTitle className="text-lg">DTLM System</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-sm text-muted-foreground mb-4">
+                      Digital Thought Leadership Model for creating meaningful influence through aligned systems.
+                    </p>
+                    <Button variant="outline" className="w-full" asChild>
+                      <a href="#dtlm">
+                        Discover DTLM &rarr;
+                      </a>
+                    </Button>
+                  </CardContent>
+                </Card>
 
-              <Card className="hover:shadow-lg transition-shadow border-primary/10">
-                <CardHeader className="pb-2">
-                  <CardTitle className="text-lg">The Journey</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-sm text-muted-foreground mb-4">
-                    From analogue systems to digital architectures - the path to purposeful transformation.
-                  </p>
-                  <Button variant="outline" className="w-full" asChild>
-                    <a href="#journey">
-                      Read Story &rarr;
-                    </a>
-                  </Button>
-                </CardContent>
-              </Card>
+                <Card className="hover:shadow-lg transition-shadow border-primary/10">
+                  <CardHeader className="pb-2">
+                    <CardTitle className="text-lg">The Journey</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-sm text-muted-foreground mb-4">
+                      From analogue systems to digital architectures - the path to purposeful transformation.
+                    </p>
+                    <Button variant="outline" className="w-full" asChild>
+                      <a href="#journey">
+                        Read Story &rarr;
+                      </a>
+                    </Button>
+                  </CardContent>
+                </Card>
 
-              <Card className="hover:shadow-lg transition-shadow border-primary/10">
-                <CardHeader className="pb-2">
-                  <CardTitle className="text-lg">Blog &amp; Insights</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-sm text-muted-foreground mb-4">
-                    Ongoing thoughts, tools, and frameworks for structured thinking and semantic design.
-                  </p>
-                  <Button variant="outline" className="w-full" asChild>
-                    <a href="https://profitworx.com" target="_blank" rel="noopener noreferrer">
-                      Visit Blog &rarr;
-                    </a>
-                  </Button>
-                </CardContent>
-              </Card>
+                <Card className="hover:shadow-lg transition-shadow border-primary/10">
+                  <CardHeader className="pb-2">
+                    <CardTitle className="text-lg">Blog &amp; Insights</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-sm text-muted-foreground mb-4">
+                      Ongoing thoughts, tools, and frameworks for structured thinking and semantic design.
+                    </p>
+                    <Button variant="outline" className="w-full" asChild>
+                      <a href="https://profitworx.com" target="_blank" rel="noopener noreferrer">
+                        Visit Blog &rarr;
+                      </a>
+                    </Button>
+                  </CardContent>
+                </Card>
 
-              <Card className="hover:shadow-lg transition-shadow border-primary/10">
-                <CardHeader className="pb-2">
-                  <CardTitle className="text-lg">Digital Tools</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-sm text-muted-foreground mb-4">
-                    Schema-driven tools, automation scripts, and microsite templates for creators and professionals.
-                  </p>
-                  <Button variant="outline" className="w-full" asChild>
-                    <a href="#tools">
-                      View Tools &rarr;
-                    </a>
-                  </Button>
-                </CardContent>
-              </Card>
-            </div>
-          </CardContent>
-        </Card>
+                <Card className="hover:shadow-lg transition-shadow border-primary/10">
+                  <CardHeader className="pb-2">
+                    <CardTitle className="text-lg">Digital Tools</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-sm text-muted-foreground mb-4">
+                      Schema-driven tools, automation scripts, and microsite templates for creators and professionals.
+                    </p>
+                    <Button variant="outline" className="w-full" asChild>
+                      <a href="#tools">
+                        View Tools &rarr;
+                      </a>
+                    </Button>
+                  </CardContent>
+                </Card>
+              </div>
+            </CardContent>
+          </Card>
         </div>
 
         <div className="grid gap-8 md:grid-cols-2">
