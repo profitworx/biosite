@@ -1,12 +1,19 @@
-import {
-  protectedResourceHandler,
-  metadataCorsOptionsRequestHandler,
-} from "mcp-handler";
+import { NextResponse } from "next/server";
 
-const handler = protectedResourceHandler({
-  // For development, you can use a placeholder auth server
-  // In production, replace with your actual OAuth authorization server
-  authServerUrls: ["https://auth.example.com"], // Replace with actual auth server
-});
+export async function GET() {
+  return NextResponse.json({
+    resource: process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000",
+    authorization_servers: ["https://auth.example.com"]
+  });
+}
 
-export { handler as GET, metadataCorsOptionsRequestHandler as OPTIONS };
+export async function OPTIONS() {
+  return new NextResponse(null, {
+    status: 200,
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Methods': 'GET, OPTIONS',
+      'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+    },
+  });
+}
