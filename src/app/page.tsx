@@ -126,7 +126,7 @@ export default function Home() {
                   </p>
                   <Button variant="outline" className="w-full" asChild>
                     <a href="#xematix">
-                      Explore XEMATIX →
+                      Explore XEMATIX &rarr;
                     </a>
                   </Button>
                 </CardContent>
@@ -142,7 +142,7 @@ export default function Home() {
                   </p>
                   <Button variant="outline" className="w-full" asChild>
                     <a href="#cam-guide">
-                      Learn CAM →
+                      Learn CAM &rarr;
                     </a>
                   </Button>
                 </CardContent>
@@ -158,7 +158,7 @@ export default function Home() {
                   </p>
                   <Button variant="outline" className="w-full" asChild>
                     <a href="#dtlm">
-                      Discover DTLM →
+                      Discover DTLM &rarr;
                     </a>
                   </Button>
                 </CardContent>
@@ -174,7 +174,7 @@ export default function Home() {
                   </p>
                   <Button variant="outline" className="w-full" asChild>
                     <a href="#journey">
-                      Read Story →
+                      Read Story &rarr;
                     </a>
                   </Button>
                 </CardContent>
@@ -190,7 +190,7 @@ export default function Home() {
                   </p>
                   <Button variant="outline" className="w-full" asChild>
                     <a href="https://profitworx.com" target="_blank" rel="noopener noreferrer">
-                      Visit Blog →
+                      Visit Blog &rarr;
                     </a>
                   </Button>
                 </CardContent>
@@ -206,7 +206,7 @@ export default function Home() {
                   </p>
                   <Button variant="outline" className="w-full" asChild>
                     <a href="#tools">
-                      View Tools →
+                      View Tools &rarr;
                     </a>
                   </Button>
                 </CardContent>
@@ -349,7 +349,7 @@ export default function Home() {
                     Not just another AI feature set, but a foundation for intent-aligned computing.
                   </p>
                   <Button variant="link" className="p-0 h-auto text-xs">
-                    Learn More →
+                    Learn More &rarr;
                   </Button>
                 </div>
                 <div className="space-y-2">
@@ -359,7 +359,7 @@ export default function Home() {
                     to structure human intent for semantic system alignment.
                   </p>
                   <Button variant="link" className="p-0 h-auto text-xs">
-                    Explore Framework →
+                    Explore Framework &rarr;
                   </Button>
                 </div>
                 <div className="space-y-2">
@@ -369,7 +369,7 @@ export default function Home() {
                     to create monetizable infrastructure and aligned workflows.
                   </p>
                   <Button variant="link" className="p-0 h-auto text-xs">
-                    Read Articles →
+                    Read Articles &rarr;
                   </Button>
                 </div>
                 <div className="space-y-2">
@@ -379,7 +379,7 @@ export default function Home() {
                     for creators who value clarity and control.
                   </p>
                   <Button variant="link" className="p-0 h-auto text-xs">
-                    View Tools →
+                    View Tools &rarr;
                   </Button>
                 </div>
               </div>
