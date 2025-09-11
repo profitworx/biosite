@@ -17,35 +17,39 @@ export default function Home() {
           </Avatar>
           
           <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
-            John Doe
+            John Deacon
           </h1>
           
           <p className="text-xl text-muted-foreground mb-6 max-w-2xl mx-auto">
-            Thought Leader • Technology Strategist • Innovation Catalyst
+            Architecting Semantic Systems | Building Tools That Align Software with Human Intention
           </p>
           
           <div className="flex flex-wrap justify-center gap-2 mb-6">
-            <Badge variant="secondary">AI & ML</Badge>
-            <Badge variant="secondary">Digital Transformation</Badge>
-            <Badge variant="secondary">Product Strategy</Badge>
-            <Badge variant="secondary">Leadership</Badge>
+            <Badge variant="secondary">Semantic Interface Architecture</Badge>
+            <Badge variant="secondary">Metacognitive System Design</Badge>
+            <Badge variant="secondary">Intent Modeling & Alignment</Badge>
+            <Badge variant="secondary">XEMATIX Framework</Badge>
           </div>
           
           <div className="flex justify-center items-center gap-4 text-sm text-muted-foreground mb-8">
             <div className="flex items-center gap-1">
               <MapPin className="w-4 h-4" />
-              <span>San Francisco, CA</span>
+              <span>Kenton-on-Sea, Eastern Cape, South Africa</span>
             </div>
           </div>
           
           <div className="flex justify-center gap-4">
-            <Button variant="default" size="lg" className="gap-2">
-              <Mail className="w-4 h-4" />
-              Get In Touch
+            <Button variant="default" size="lg" className="gap-2" asChild>
+              <a href="mailto:john@profitworx.com">
+                <Mail className="w-4 h-4" />
+                Get In Touch
+              </a>
             </Button>
-            <Button variant="outline" size="lg" className="gap-2">
-              <ExternalLink className="w-4 h-4" />
-              View Resume
+            <Button variant="outline" size="lg" className="gap-2" asChild>
+              <a href="https://johndeacon.co.za" target="_blank" rel="noopener noreferrer">
+                <ExternalLink className="w-4 h-4" />
+                Visit Personal Site
+              </a>
             </Button>
           </div>
         </div>
@@ -58,14 +62,20 @@ export default function Home() {
             </CardHeader>
             <CardContent className="space-y-4">
               <p className="text-muted-foreground leading-relaxed">
-                I&apos;m a visionary technology leader with over 15 years of experience driving digital transformation 
-                and innovation across Fortune 500 companies. My passion lies in leveraging emerging technologies 
-                to solve complex business challenges and create meaningful impact.
+                I&apos;m designing systems that align with how humans actually think - not just how machines process input. 
+                At the center of that vision is XEMATIX - a cognitive interface architecture that bridges natural language, 
+                structured logic, and contextual reasoning. It&apos;s not a product. It&apos;s a foundation.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                As a thought leader in AI and machine learning, I&apos;ve helped organizations navigate the rapidly 
-                evolving tech landscape, from implementing cutting-edge solutions to building high-performing 
-                teams that deliver exceptional results.
+                Underneath it sits the Core Alignment Model (CAM) - a metacognitive framework I developed over years 
+                of systems design, cognitive modeling, and strategic problem-solving. CAM brings structure to human 
+                intent through a Mission. Vision. Strategy. Tactics. Conscious Awareness scaffold, allowing systems 
+                to interpret, reason, and execute based on semantic alignment.
+              </p>
+              <p className="text-muted-foreground leading-relaxed">
+                I&apos;m now sharing these ideas publicly - through content, scripts, templates, and systems - helping 
+                independent professionals and creators apply structured thinking, automation, and semantic design 
+                to their own workflows.
               </p>
             </CardContent>
           </Card>
@@ -77,26 +87,37 @@ export default function Home() {
             </CardHeader>
             <CardContent className="space-y-6">
               <div>
-                <h3 className="font-semibold">Chief Technology Officer</h3>
-                <p className="text-sm text-muted-foreground">TechCorp Inc. • 2021 - Present</p>
+                <h3 className="font-semibold">Founder • XEMATIX</h3>
+                <p className="text-sm text-muted-foreground">January 2025 - Present</p>
                 <p className="text-sm mt-2 text-muted-foreground">
-                  Leading digital transformation initiatives and AI strategy for a $2B technology company.
+                  Building semantic control systems that interpret human intent through structured language and contextual logic. 
+                  Developing the Core Alignment Model (CAM) framework for cognitive interface software.
                 </p>
               </div>
               <Separator />
               <div>
-                <h3 className="font-semibold">VP of Product Strategy</h3>
-                <p className="text-sm text-muted-foreground">InnovateLabs • 2018 - 2021</p>
+                <h3 className="font-semibold">Founder & Strategist • ProfitWorx</h3>
+                <p className="text-sm text-muted-foreground">May 2008 - Present (17+ years)</p>
                 <p className="text-sm mt-2 text-muted-foreground">
-                  Drove product innovation and go-to-market strategy for emerging tech solutions.
+                  Strategic consulting in semantic SEO, content engineering, and digital systems. 
+                  Productized automation solutions for writers, creators, and marketers.
                 </p>
               </div>
               <Separator />
               <div>
-                <h3 className="font-semibold">Senior Director, Engineering</h3>
-                <p className="text-sm text-muted-foreground">StartupXYZ • 2015 - 2018</p>
+                <h3 className="font-semibold">Head of Product & Business Development • PageMatix</h3>
+                <p className="text-sm text-muted-foreground">March 2018 - Present (7+ years)</p>
                 <p className="text-sm mt-2 text-muted-foreground">
-                  Built and scaled engineering teams from 10 to 100+ people across multiple products.
+                  Microsite platform empowering professionals to launch personal brands using CAM framework principles.
+                </p>
+              </div>
+              <Separator />
+              <div>
+                <h3 className="font-semibold">Global Account Executive • Bentley Systems</h3>
+                <p className="text-sm text-muted-foreground">November 2004 - May 2008 (3.5 years)</p>
+                <p className="text-sm mt-2 text-muted-foreground">
+                  Managed global accounts for oil and gas industry including Anglo American, De Beers, Rio Tinto. 
+                  Awarded winners circle for consecutive years in sales performance.
                 </p>
               </div>
             </CardContent>
@@ -109,31 +130,67 @@ export default function Home() {
             </CardHeader>
             <CardContent className="space-y-4">
               <div>
-                <h3 className="font-semibold mb-2">Technology Leadership</h3>
+                <h3 className="font-semibold mb-2">Semantic Systems Architecture</h3>
                 <div className="flex flex-wrap gap-1">
-                  <Badge variant="outline" className="text-xs">Strategic Planning</Badge>
-                  <Badge variant="outline" className="text-xs">Team Building</Badge>
+                  <Badge variant="outline" className="text-xs">XEMATIX Framework</Badge>
+                  <Badge variant="outline" className="text-xs">Core Alignment Model (CAM)</Badge>
+                  <Badge variant="outline" className="text-xs">Intent Modeling</Badge>
+                  <Badge variant="outline" className="text-xs">Cognitive Interface Design</Badge>
+                </div>
+              </div>
+              <Separator />
+              <div>
+                <h3 className="font-semibold mb-2">Digital Systems & Automation</h3>
+                <div className="flex flex-wrap gap-1">
+                  <Badge variant="outline" className="text-xs">Schema Design</Badge>
+                  <Badge variant="outline" className="text-xs">Google Apps Script</Badge>
+                  <Badge variant="outline" className="text-xs">Prompt Engineering</Badge>
+                  <Badge variant="outline" className="text-xs">Workflow Automation</Badge>
+                  <Badge variant="outline" className="text-xs">Microsite Development</Badge>
+                </div>
+              </div>
+              <Separator />
+              <div>
+                <h3 className="font-semibold mb-2">Strategic Consulting & SEO</h3>
+                <div className="flex flex-wrap gap-1">
+                  <Badge variant="outline" className="text-xs">Semantic SEO</Badge>
+                  <Badge variant="outline" className="text-xs">Content Engineering</Badge>
                   <Badge variant="outline" className="text-xs">Digital Transformation</Badge>
+                  <Badge variant="outline" className="text-xs">Business Development</Badge>
                 </div>
               </div>
               <Separator />
               <div>
-                <h3 className="font-semibold mb-2">Technical Skills</h3>
+                <h3 className="font-semibold mb-2">Engineering & Technical</h3>
                 <div className="flex flex-wrap gap-1">
-                  <Badge variant="outline" className="text-xs">AI/ML</Badge>
-                  <Badge variant="outline" className="text-xs">Cloud Architecture</Badge>
-                  <Badge variant="outline" className="text-xs">Data Science</Badge>
-                  <Badge variant="outline" className="text-xs">DevOps</Badge>
+                  <Badge variant="outline" className="text-xs">Instrumentation Design</Badge>
+                  <Badge variant="outline" className="text-xs">CAD Systems</Badge>
+                  <Badge variant="outline" className="text-xs">Industrial Software</Badge>
+                  <Badge variant="outline" className="text-xs">Project Management</Badge>
                 </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Education Section */}
+          <Card>
+            <CardHeader>
+              <CardTitle className="text-xl">Education</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-6">
+              <div>
+                <h3 className="font-semibold">Bachelor of Arts - Business Administration & Project Management</h3>
+                <p className="text-sm text-muted-foreground">The University of Western Australia • 2005 - 2006</p>
               </div>
               <Separator />
               <div>
-                <h3 className="font-semibold mb-2">Business Strategy</h3>
-                <div className="flex flex-wrap gap-1">
-                  <Badge variant="outline" className="text-xs">Product Management</Badge>
-                  <Badge variant="outline" className="text-xs">Innovation</Badge>
-                  <Badge variant="outline" className="text-xs">Market Analysis</Badge>
-                </div>
+                <h3 className="font-semibold">Bachelor of Arts - Law & Politics</h3>
+                <p className="text-sm text-muted-foreground">University of South Africa • 2002 - 2005</p>
+              </div>
+              <Separator />
+              <div>
+                <h3 className="font-semibold">Bachelor Juris - Law</h3>
+                <p className="text-sm text-muted-foreground">Nelson Mandela University • 1990 - 1993</p>
               </div>
             </CardContent>
           </Card>
@@ -141,29 +198,51 @@ export default function Home() {
           {/* Recent Insights */}
           <Card className="col-span-full">
             <CardHeader>
-              <CardTitle className="text-xl">Recent Insights & Thought Leadership</CardTitle>
+              <CardTitle className="text-xl">Current R&D & Thought Leadership</CardTitle>
               <CardDescription>
-                Sharing perspectives on technology trends and industry insights
+                Exploring the intersection of semantic systems, cognitive modeling, and human-computer interaction
               </CardDescription>
             </CardHeader>
             <CardContent>
               <div className="grid gap-4 md:grid-cols-2">
                 <div className="space-y-2">
-                  <h3 className="font-semibold text-sm">The Future of AI in Enterprise</h3>
+                  <h3 className="font-semibold text-sm">XEMATIX: Cognitive Interface Architecture</h3>
                   <p className="text-xs text-muted-foreground">
-                    Exploring how artificial intelligence will reshape business operations and strategy in the next decade.
+                    Building semantic control systems that bridge natural language, structured logic, and contextual reasoning. 
+                    Not just another AI feature set, but a foundation for intent-aligned computing.
                   </p>
                   <Button variant="link" className="p-0 h-auto text-xs">
-                    Read More →
+                    Learn More →
                   </Button>
                 </div>
                 <div className="space-y-2">
-                  <h3 className="font-semibold text-sm">Building Resilient Tech Teams</h3>
+                  <h3 className="font-semibold text-sm">Core Alignment Model (CAM)</h3>
                   <p className="text-xs text-muted-foreground">
-                    Strategies for creating high-performing engineering teams that thrive in uncertain times.
+                    A metacognitive framework using Mission. Vision. Strategy. Tactics. Conscious Awareness scaffolding 
+                    to structure human intent for semantic system alignment.
                   </p>
                   <Button variant="link" className="p-0 h-auto text-xs">
-                    Read More →
+                    Explore Framework →
+                  </Button>
+                </div>
+                <div className="space-y-2">
+                  <h3 className="font-semibold text-sm">Structured Thinking for AI Era</h3>
+                  <p className="text-xs text-muted-foreground">
+                    Helping independent professionals apply structured thinking, automation, and semantic design 
+                    to create monetizable infrastructure and aligned workflows.
+                  </p>
+                  <Button variant="link" className="p-0 h-auto text-xs">
+                    Read Articles →
+                  </Button>
+                </div>
+                <div className="space-y-2">
+                  <h3 className="font-semibold text-sm">Digital Independence Tools</h3>
+                  <p className="text-xs text-muted-foreground">
+                    Schema-driven tools, automation scripts, and microsite templates that save time and generate revenue 
+                    for creators who value clarity and control.
+                  </p>
+                  <Button variant="link" className="p-0 h-auto text-xs">
+                    View Tools →
                   </Button>
                 </div>
               </div>
@@ -175,21 +254,24 @@ export default function Home() {
         <div className="mt-12 text-center">
           <Separator className="mb-8" />
           <div className="flex justify-center gap-4 mb-8">
-            <Button variant="ghost" size="icon">
-              <Twitter className="w-5 h-5" />
+            <Button variant="ghost" size="icon" asChild>
+              <a href="https://www.linkedin.com/in/jdeaconx" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+                <Linkedin className="w-5 h-5" />
+              </a>
             </Button>
-            <Button variant="ghost" size="icon">
-              <Linkedin className="w-5 h-5" />
+            <Button variant="ghost" size="icon" asChild>
+              <a href="https://profitworx.com" target="_blank" rel="noopener noreferrer" title="ProfitWorx Blog">
+                <ExternalLink className="w-5 h-5" />
+              </a>
             </Button>
-            <Button variant="ghost" size="icon">
-              <Github className="w-5 h-5" />
-            </Button>
-            <Button variant="ghost" size="icon">
-              <Mail className="w-5 h-5" />
+            <Button variant="ghost" size="icon" asChild>
+              <a href="mailto:john@profitworx.com" title="Email">
+                <Mail className="w-5 h-5" />
+              </a>
             </Button>
           </div>
           <p className="text-sm text-muted-foreground">
-            © 2024 John Doe. Built with Next.js and shadcn/ui.
+            © 2025 John Deacon. Built with Next.js and shadcn/ui.
           </p>
         </div>
       </div>
