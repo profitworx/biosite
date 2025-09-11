@@ -214,6 +214,7 @@ export default function Home() {
             </div>
           </CardContent>
         </Card>
+        </div>
 
         <div className="grid gap-8 md:grid-cols-2">
           {/* Experience Section */}
