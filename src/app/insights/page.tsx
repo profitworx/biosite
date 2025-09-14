@@ -1,3 +1,4 @@
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
@@ -7,6 +8,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { ExternalLink, Mail, MapPin } from "lucide-react";
 
 export const metadata = {
   title: "Insights - Latest Posts",
@@ -83,11 +85,47 @@ export default async function InsightsPage() {
 
   return (
     <div className="container mx-auto px-4 py-8 max-w-4xl">
-      <div className="mb-8">
-        <h1 className="text-3xl font-bold">Insights</h1>
-        <p className="text-muted-foreground">
-          Latest articles from johndeacon.co.za
+      {/* Profile Header */}
+      <div className="text-center mb-10">
+        <Avatar className="w-24 h-24 mx-auto mb-4 border-4 border-primary/20">
+          <AvatarImage src="/images/profile-avatar.jpg" alt="John Deacon Profile" />
+          <AvatarFallback className="font-bold bg-primary/10">JD</AvatarFallback>
+        </Avatar>
+        <h1 className="text-3xl md:text-4xl font-bold mb-3 bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
+          John Deacon
+        </h1>
+        <p className="text-base md:text-lg text-muted-foreground mb-4 max-w-2xl mx-auto">
+          Architecting Semantic Systems | Building Tools That Align Software with Human Intention
         </p>
+        <div className="flex flex-wrap justify-center gap-2 mb-4">
+          <Badge variant="secondary">Semantic Interface Architecture</Badge>
+          <Badge variant="secondary">Metacognitive System Design</Badge>
+          <Badge variant="secondary">Intent Modeling &amp; Alignment</Badge>
+          <Badge variant="secondary">XEMATIX Framework</Badge>
+        </div>
+        <div className="flex justify-center items-center gap-2 text-sm text-muted-foreground mb-6">
+          <MapPin className="w-4 h-4" />
+          <span>Kenton-on-Sea, Eastern Cape, South Africa</span>
+        </div>
+        <div className="flex justify-center gap-3">
+          <Button variant="default" className="gap-2" asChild>
+            <a href="mailto:john@profitworx.com">
+              <Mail className="w-4 h-4" />
+              Get In Touch
+            </a>
+          </Button>
+          <Button variant="outline" className="gap-2" asChild>
+            <a href="https://johndeacon.co.za" target="_blank" rel="noopener noreferrer">
+              <ExternalLink className="w-4 h-4" />
+              Read Articles
+            </a>
+          </Button>
+        </div>
+      </div>
+
+      <div className="mb-6">
+        <h2 className="text-2xl font-semibold">Latest Insights</h2>
+        <p className="text-muted-foreground">Six most recent posts</p>
       </div>
 
       {error ? (
