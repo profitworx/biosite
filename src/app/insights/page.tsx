@@ -34,6 +34,7 @@ type WpPost = {
   link: string;
   title: WpRendered;
   excerpt: WpRendered;
+  content?: WpRendered;
   _embedded?: ({
     ["wp:term"]?: Array<WpTag[]>; // array of term groups (categories, tags, etc.)
   } & Record<string, unknown>);
@@ -63,6 +64,14 @@ function extractTags(post: WpPost): WpTag[] {
     group.some((t) => (t as WpTag).taxonomy === "post_tag")
   );
   return (tagsGroup as WpTag[] | undefined) ?? [];
+}
+
+function firstParagraphFromHtml(html?: string): string | null {
+  if (!html) return null;
+  // Remove the WordPress more tag if present
+  const cleaned = html.replace(/<!--\s*more\s*-->/gi, "");
+  const match = cleaned.match(/<p\b[^>]*>[\s\S]*?<\/p>/i);
+  return match ? match[0] : null;
 }
 
 export default async function InsightsPage() {
@@ -156,6 +165,7 @@ export default async function InsightsPage() {
         <div className="grid gap-6">
           {posts.map((post) => {
             const tags = extractTags(post);
+            const firstPara = firstParagraphFromHtml(post.content?.rendered);
             return (
               <Card key={post.id} className="border-primary/10">
                 <CardHeader>
@@ -173,11 +183,18 @@ export default async function InsightsPage() {
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-3">
-                  <div
-                    className="prose dark:prose-invert max-w-none text-sm text-muted-foreground"
-                    // WordPress provides sanitized HTML excerpts; render as provided
-                    dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }}
-                  />
+                  {firstPara ? (
+                    <div
+                      className="prose dark:prose-invert max-w-none text-sm text-muted-foreground"
+                      dangerouslySetInnerHTML={{ __html: firstPara }}
+                    />
+                  ) : (
+                    <div
+                      className="prose dark:prose-invert max-w-none text-sm text-muted-foreground"
+                      // WordPress provides sanitized HTML excerpts; render as provided
+                      dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }}
+                    />
+                  )}
                   {tags.length > 0 && (
                     <div className="flex flex-wrap gap-2 pt-1">
                       {tags.map((tag) => (
