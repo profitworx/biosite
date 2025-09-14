@@ -48,7 +48,7 @@ export default function Home() {
             <Button variant="outline" size="lg" className="gap-2" asChild>
               <a href="https://johndeacon.co.za" target="_blank" rel="noopener noreferrer">
                 <ExternalLink className="w-4 h-4" />
-                Visit Personal Site
+                Read Articles
               </a>
             </Button>
           </div>
@@ -189,7 +189,7 @@ export default function Home() {
                       Ongoing thoughts, tools, and frameworks for structured thinking and semantic design.
                     </p>
                     <Button variant="outline" className="w-full" asChild>
-                      <a href="https://profitworx.com" target="_blank" rel="noopener noreferrer">
+                      <a href="https://johndeacon.co.za" target="_blank" rel="noopener noreferrer">
                         Visit Blog &rarr;
                       </a>
                     </Button>
