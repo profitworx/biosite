@@ -3,7 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
-import { Github, Linkedin, Twitter, Mail, ExternalLink, MapPin } from "lucide-react";
+import { Linkedin, Mail, ExternalLink, MapPin } from "lucide-react";
 
 export default function Home() {
   return (
@@ -224,7 +224,7 @@ export default function Home() {
                 XEMATIX
               </CardTitle>
               <CardDescription className="text-xl text-foreground/90 max-w-3xl mx-auto">
-                Your Intuitive "Thinking Operating System"
+                Your Intuitive Thinking Operating System
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-8 max-w-5xl mx-auto">
