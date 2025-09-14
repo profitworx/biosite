@@ -115,7 +115,7 @@ export default function Home() {
                 </p>
               </div>
               
-              <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3 mt-8">
+              <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
                 <Card className="hover:shadow-lg transition-shadow border-primary/10">
                   <CardHeader className="pb-2">
                     <CardTitle className="text-lg">XEMATIX Architecture</CardTitle>
