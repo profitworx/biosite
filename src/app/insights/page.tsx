@@ -9,9 +9,9 @@ import {
 } from "@/components/ui/card";
 
 export const metadata = {
-  title: "Insights — Latest Posts",
+  title: "Insights - Latest Posts",
   description:
-    "Latest 6 posts from johndeacon.co.za — titles, excerpts, and tags.",
+    "Latest 6 posts from johndeacon.co.za - titles, excerpts, and tags.",
 };
 
 type WpRendered = { rendered: string };
@@ -30,10 +30,9 @@ type WpPost = {
   link: string;
   title: WpRendered;
   excerpt: WpRendered;
-  _embedded?: {
-    [key: string]: any;
+  _embedded?: ({
     ["wp:term"]?: Array<WpTag[]>; // array of term groups (categories, tags, etc.)
-  };
+  } & Record<string, unknown>);
 };
 
 async function getPosts(): Promise<WpPost[]> {
@@ -68,8 +67,18 @@ export default async function InsightsPage() {
 
   try {
     posts = await getPosts();
-  } catch (e: any) {
-    error = e?.message ?? "Unable to fetch posts.";
+  } catch (e: unknown) {
+    if (e instanceof Error) {
+      error = e.message;
+    } else if (typeof e === "string") {
+      error = e;
+    } else {
+      try {
+        error = JSON.stringify(e);
+      } catch {
+        error = "Unable to fetch posts.";
+      }
+    }
   }
 
   return (
@@ -148,7 +157,7 @@ export default async function InsightsPage() {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        Read on Blog →
+                        Read on Blog &rarr;
                       </a>
                     </Button>
                   </div>
@@ -173,4 +182,3 @@ export default async function InsightsPage() {
     </div>
   );
 }
-
