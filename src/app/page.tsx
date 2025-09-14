@@ -205,7 +205,7 @@ export default function Home() {
                       Schema-driven tools, automation scripts, and microsite templates for creators and professionals.
                     </p>
                     <Button variant="outline" className="w-full" asChild>
-                      <a href="#tools">
+                      <a href="/tools">
                         View Tools &rarr;
                       </a>
                     </Button>
