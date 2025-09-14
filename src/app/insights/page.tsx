@@ -66,12 +66,17 @@ function extractTags(post: WpPost): WpTag[] {
   return (tagsGroup as WpTag[] | undefined) ?? [];
 }
 
-function firstParagraphFromHtml(html?: string): string | null {
+function italicLeadParagraph(html?: string): string | null {
   if (!html) return null;
-  // Remove the WordPress more tag if present
+  // Remove WordPress more tag if present
   const cleaned = html.replace(/<!--\s*more\s*-->/gi, "");
-  const match = cleaned.match(/<p\b[^>]*>[\s\S]*?<\/p>/i);
-  return match ? match[0] : null;
+  // Find all paragraph blocks
+  const paragraphs = cleaned.match(/<p\b[^>]*>[\s\S]*?<\/p>/gi) || [];
+  // Prefer the first paragraph containing italics (<em> or <i>)
+  const italicPara = paragraphs.find((p) => /<\s*(em|i)\b/i.test(p));
+  if (italicPara) return italicPara;
+  // Fallback: first paragraph if no italic paragraph exists
+  return paragraphs[0] ?? null;
 }
 
 export default async function InsightsPage() {
@@ -165,7 +170,7 @@ export default async function InsightsPage() {
         <div className="grid gap-6">
           {posts.map((post) => {
             const tags = extractTags(post);
-            const firstPara = firstParagraphFromHtml(post.content?.rendered);
+            const firstPara = italicLeadParagraph(post.content?.rendered);
             return (
               <Card key={post.id} className="border-primary/10">
                 <CardHeader>
@@ -197,7 +202,7 @@ export default async function InsightsPage() {
                   )}
                   {tags.length > 0 && (
                     <div className="flex flex-wrap gap-2 pt-1">
-                      {tags.map((tag) => (
+                      {tags.slice(0, 3).map((tag) => (
                         <Badge key={tag.id} variant="secondary" asChild>
                           <a
                             href={tag.link}
