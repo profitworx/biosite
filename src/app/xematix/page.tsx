@@ -4,11 +4,16 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Separator } from "@/components/ui/separator";
 import { ExternalLink, ArrowLeft } from "lucide-react";
 import Link from "next/link";
+import { ThemeToggle } from "@/components/ui/theme-toggle";
 
 export default function XematixPage() {
   return (
-    <div className="dark min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-background text-foreground">
       <div className="container mx-auto px-4 py-8 max-w-5xl">
+        {/* Theme Toggle */}
+        <div className="flex justify-end mb-4">
+          <ThemeToggle />
+        </div>
         {/* Back to Home */}
         <div className="mb-8">
           <Button variant="ghost" asChild className="gap-2">

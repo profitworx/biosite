@@ -4,11 +4,16 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { Linkedin, Mail, ExternalLink, MapPin } from "lucide-react";
+import { ThemeToggle } from "@/components/ui/theme-toggle";
 
 export default function Home() {
   return (
-    <div className="dark min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-background text-foreground">
       <div className="container mx-auto px-4 py-8 max-w-4xl">
+        {/* Theme Toggle */}
+        <div className="flex justify-end mb-4">
+          <ThemeToggle />
+        </div>
         {/* Hero Section */}
         <div className="text-center mb-12">
           <Avatar className="w-32 h-32 mx-auto mb-6 border-4 border-primary/20">

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { ThemeProvider } from "@/components/theme-provider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "John Doe - Technology Leader & Thought Leader",
-  description: "Personal brand and biography site for John Doe - Technology Strategist, Innovation Catalyst, and AI/ML expert.",
+  title: "John Deacon - Semantic Systems Architect & XEMATIX Founder",
+  description: "Personal brand and biography site for John Deacon - Semantic Systems Architect, XEMATIX Framework Creator, and Digital Thought Leadership Model Developer.",
 };
 
 export default function RootLayout({
@@ -23,11 +24,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
