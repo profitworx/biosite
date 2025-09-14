@@ -235,8 +235,8 @@ export default function Home() {
                   stays true to your original purpose.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  This is the essence of <strong>XEMATIX</strong>, a groundbreaking "metacognitive software infrastructure" that empowers
-                  systems to <strong>"think about their own thinking"</strong>. It acts like a "thinking OS" or the "brain and nervous system"
+                  This is the essence of <strong>XEMATIX</strong>, a groundbreaking &ldquo;metacognitive software infrastructure&rdquo; that empowers
+                  systems to <strong>&ldquo;think about their own thinking&rdquo;</strong>. It acts like a &ldquo;thinking OS&rdquo; or the &ldquo;brain and nervous system&rdquo;
                   for creators, strategists, and organizations, bridging the gap between abstract human ideas, expressed in everyday language,
                   and the concrete logic needed to make things happen.
                 </p>
@@ -258,12 +258,12 @@ export default function Home() {
                     </CardHeader>
                     <CardContent className="text-sm text-muted-foreground leading-relaxed">
                       <p>
-                        At its heart, CAM provides the system with an "internal compass" or "DNA" for structural logic and integrity.
+                        At its heart, CAM provides the system with an &ldquo;internal compass&rdquo; or &ldquo;DNA&rdquo; for structural logic and integrity.
                         It helps XEMATIX understand <strong>why</strong> something needs to be done, <strong>what</strong> the desired
                         future looks like, <strong>how</strong> to get there, and <strong>what specific actions</strong> are required.
                       </p>
                       <p className="mt-3">
-                        It includes a "Conscious Awareness" element, allowing the system to actively monitor itself, reflect on its
+                        It includes a &ldquo;Conscious Awareness&rdquo; element, allowing the system to actively monitor itself, reflect on its
                         coherence, and make adjustments over time, transforming a static plan into a dynamic, living system.
                       </p>
                     </CardContent>
@@ -276,12 +276,12 @@ export default function Home() {
                     </CardHeader>
                     <CardContent className="text-sm text-muted-foreground leading-relaxed">
                       <p>
-                        Think of an ALO as a "live" representation of your entire brand, a policy document, or any structured knowledge,
-                        treating it as a dynamic, editable object. This is not just a static document; it's a "living, thinking schema
-                        that evolves with you — and corrects itself".
+                        Think of an ALO as a &ldquo;live&rdquo; representation of your entire brand, a policy document, or any structured knowledge,
+                        treating it as a dynamic, editable object. This is not just a static document; it&apos;s a &ldquo;living, thinking schema
+                        that evolves with you — and corrects itself&rdquo;.
                       </p>
                       <p className="mt-3">
-                        Your ideas, strategies, and content pieces are stored as modular "sub-objects" within the ALO, all carefully
+                        Your ideas, strategies, and content pieces are stored as modular &ldquo;sub-objects&rdquo; within the ALO, all carefully
                         linked to your CAM framework to ensure consistent alignment.
                       </p>
                     </CardContent>
@@ -319,7 +319,7 @@ export default function Home() {
                       <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0"></div>
                       <div>
                         <h4 className="font-semibold text-sm">Self-Aware and Self-Correcting</h4>
-                        <p className="text-sm text-muted-foreground">A system that "thinks about its own thinking," constantly adapting and optimizing based on structured reasoning.</p>
+                        <p className="text-sm text-muted-foreground">A system that &ldquo;thinks about its own thinking,&rdquo; constantly adapting and optimizing based on structured reasoning.</p>
                       </div>
                     </div>
 
@@ -345,7 +345,7 @@ export default function Home() {
                       <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0"></div>
                       <div>
                         <h4 className="font-semibold text-sm">Flexible and Future-Proof</h4>
-                        <p className="text-sm text-muted-foreground">"Decouples purpose from interface" - your core ideas are independent of how they are delivered, offering immense agility.</p>
+                        <p className="text-sm text-muted-foreground">&ldquo;Decouples purpose from interface&rdquo; - your core ideas are independent of how they are delivered, offering immense agility.</p>
                       </div>
                     </div>
 
@@ -361,7 +361,7 @@ export default function Home() {
                       <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0"></div>
                       <div>
                         <h4 className="font-semibold text-sm">Intelligent Framework</h4>
-                        <p className="text-sm text-muted-foreground">More than software - it's a framework that helps give shape to thoughts and empowers systems to act with clarity and consistency.</p>
+                        <p className="text-sm text-muted-foreground">More than software - it&apos;s a framework that helps give shape to thoughts and empowers systems to act with clarity and consistency.</p>
                       </div>
                     </div>
                   </div>
@@ -370,7 +370,7 @@ export default function Home() {
 
               <div className="text-center mt-8">
                 <p className="text-lg font-semibold text-primary mb-4">
-                  XEMATIX is more than just software; it's an intelligent framework that helps you give shape to your thoughts,
+                  XEMATIX is more than just software; it&apos;s an intelligent framework that helps you give shape to your thoughts,
                   maintain alignment across all your endeavors, and empower systems to act on your behalf with unparalleled clarity and consistency.
                 </p>
 
