@@ -5,11 +5,48 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Separator } from "@/components/ui/separator";
 import { Linkedin, Mail, ExternalLink, MapPin } from "lucide-react";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
+import { JsonLd } from "@/components/seo/json-ld";
+import { creativeWorkSchema, faqSchema, absoluteUrl } from "@/lib/schema";
+import Image from "next/image";
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <div className="container mx-auto px-4 py-8 max-w-4xl">
+        <JsonLd
+          id="schema-home"
+          data={[
+            creativeWorkSchema({
+              name: 'John Deacon — Semantic Systems Architect',
+              description:
+                'Architecting metacognitive software, semantic systems, and alignment frameworks such as XEMATIX and CAM.',
+              keywords: [
+                'Metacognitive Software',
+                'Semantic Systems',
+                'XEMATIX',
+                'Core Alignment Model',
+              ],
+              url: absoluteUrl('/'),
+            }),
+            faqSchema([
+              {
+                question: 'Who is John Deacon?',
+                answer:
+                  'A semantic systems architect and digital thought leader focused on metacognitive software and alignment frameworks.',
+              },
+              {
+                question: 'What is XEMATIX?',
+                answer:
+                  'XEMATIX is a metacognitive framework that bridges natural language, structured logic, and contextual reasoning into executable systems.',
+              },
+              {
+                question: 'What is the Core Alignment Model (CAM)?',
+                answer:
+                  'CAM is a metacognitive scaffold—Mission, Vision, Strategy, Tactics, and Conscious Awareness—that aligns intent to execution.',
+              },
+            ]),
+          ]}
+        />
         {/* Theme Toggle */}
         <div className="flex justify-end mb-4">
           <ThemeToggle />
@@ -107,10 +144,13 @@ export default function Home() {
                 </p>
                 
                 <div className="my-8 flex justify-center">
-                  <img 
-                    src="/images/john-deacon-featured.png" 
+                  <Image
+                    src="/images/john-deacon-featured.png"
                     alt="John Deacon - Cognitive Systems Architect"
+                    width={900}
+                    height={600}
                     className="rounded-lg shadow-lg max-w-md w-full h-auto border border-primary/20"
+                    priority
                   />
                 </div>
                 

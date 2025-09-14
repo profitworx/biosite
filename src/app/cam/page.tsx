@@ -6,11 +6,37 @@ import { Badge } from "@/components/ui/badge";
 import { ArrowLeft, Target, Eye, Map, Zap, Brain } from "lucide-react";
 import Link from "next/link";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
+import { JsonLd } from "@/components/seo/json-ld";
+import { creativeWorkSchema, faqSchema, absoluteUrl } from "@/lib/schema";
 
 export default function CAMPage() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <div className="container mx-auto px-4 py-8 max-w-5xl">
+        <JsonLd
+          id="schema-cam"
+          data={[
+            creativeWorkSchema({
+              name: 'Core Alignment Model (CAM)',
+              description:
+                'A metacognitive scaffold that aligns intent to execution through Mission, Vision, Strategy, Tactics, and Conscious Awareness.',
+              keywords: ['CAM', 'Core Alignment Model', 'Metacognitive Framework'],
+              url: absoluteUrl('/cam'),
+            }),
+            faqSchema([
+              {
+                question: 'What is CAM?',
+                answer:
+                  'CAM is a framework for aligning purpose with execution using a structured mental model and continuous awareness.',
+              },
+              {
+                question: 'How does CAM help?',
+                answer:
+                  'It ensures clarity and consistency by anchoring decisions and actions to a shared structure of intent.',
+              },
+            ]),
+          ]}
+        />
         {/* Theme Toggle */}
         <div className="flex justify-end mb-4">
           <ThemeToggle />

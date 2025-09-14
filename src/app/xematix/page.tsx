@@ -5,11 +5,42 @@ import { Separator } from "@/components/ui/separator";
 import { ExternalLink, ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
+import { JsonLd } from "@/components/seo/json-ld";
+import { creativeWorkSchema, faqSchema, absoluteUrl } from "@/lib/schema";
 
 export default function XematixPage() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <div className="container mx-auto px-4 py-8 max-w-5xl">
+        <JsonLd
+          id="schema-xematix"
+          data={[
+            creativeWorkSchema({
+              name: 'XEMATIX — Metacognitive Framework',
+              description:
+                'A metacognitive software framework that bridges natural language, structured logic, and contextual reasoning into executable systems.',
+              keywords: ['XEMATIX', 'Metacognition', 'Semantic Systems'],
+              url: absoluteUrl('/xematix'),
+            }),
+            faqSchema([
+              {
+                question: 'What is XEMATIX?',
+                answer:
+                  'XEMATIX is an intent-aligned, metacognitive framework for structuring and executing human ideas via software.',
+              },
+              {
+                question: 'Who is XEMATIX for?',
+                answer:
+                  'Creators, strategists, and organizations seeking consistent, purpose-aligned systems and outputs.',
+              },
+              {
+                question: 'How does it relate to CAM?',
+                answer:
+                  'CAM provides the internal compass; XEMATIX operationalizes that compass into living logic and action.',
+              },
+            ]),
+          ]}
+        />
         {/* Theme Toggle */}
         <div className="flex justify-end mb-4">
           <ThemeToggle />

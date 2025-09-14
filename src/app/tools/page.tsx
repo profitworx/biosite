@@ -6,11 +6,37 @@ import { Badge } from "@/components/ui/badge";
 import { ArrowLeft, Wrench, FileText, Bot, Zap, Globe, Briefcase } from "lucide-react";
 import Link from "next/link";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
+import { JsonLd } from "@/components/seo/json-ld";
+import { collectionPageSchema, faqSchema, absoluteUrl } from "@/lib/schema";
 
 export default function ToolsPage() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <div className="container mx-auto px-4 py-8 max-w-6xl">
+        <JsonLd
+          id="schema-tools"
+          data={[
+            collectionPageSchema({
+              name: 'Digital Tools — John Deacon',
+              description:
+                'Schema-driven tools, automation scripts, and microsite templates aligned with metacognitive software principles.',
+              keywords: ['Digital Tools', 'Automation', 'Semantic Design'],
+              url: absoluteUrl('/tools'),
+            }),
+            faqSchema([
+              {
+                question: 'What kind of tools are these?',
+                answer:
+                  'Utilities and templates that embody structured thinking, semantic design, and intelligent automation.',
+              },
+              {
+                question: 'Are the tools production-ready?',
+                answer:
+                  'Some are live, others are in development; each card indicates availability and purpose.',
+              },
+            ]),
+          ]}
+        />
         {/* Theme Toggle */}
         <div className="flex justify-end mb-4">
           <ThemeToggle />

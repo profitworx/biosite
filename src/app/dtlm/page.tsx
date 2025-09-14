@@ -6,11 +6,37 @@ import { Badge } from "@/components/ui/badge";
 import { ArrowLeft, User, Zap, Target, Unlock, Star, TrendingUp, Compass, Focus, Users, BarChart3, Lightbulb } from "lucide-react";
 import Link from "next/link";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
+import { JsonLd } from "@/components/seo/json-ld";
+import { creativeWorkSchema, faqSchema, absoluteUrl } from "@/lib/schema";
 
 export default function DTLMPage() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <div className="container mx-auto px-4 py-8 max-w-6xl">
+        <JsonLd
+          id="schema-dtlm"
+          data={[
+            creativeWorkSchema({
+              name: 'Digital Thought Leadership Model (DTLM)',
+              description:
+                'A practical model and toolkit for building authentic digital influence aligned to core purpose and strategic outcomes.',
+              keywords: ['DTLM', 'Digital Thought Leadership', 'Personal Branding'],
+              url: absoluteUrl('/dtlm'),
+            }),
+            faqSchema([
+              {
+                question: 'What is DTLM?',
+                answer:
+                  'DTLM is a model that structures personal branding, digital innovation, and alignment into actionable practice.',
+              },
+              {
+                question: 'Who benefits from DTLM?',
+                answer:
+                  'Independent professionals and creators seeking clarity, consistency, and measurable growth in digital presence.',
+              },
+            ]),
+          ]}
+        />
         {/* Theme Toggle */}
         <div className="flex justify-end mb-4">
           <ThemeToggle />

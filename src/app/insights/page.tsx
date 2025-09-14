@@ -11,6 +11,8 @@ import {
 import { ExternalLink, Mail, MapPin } from "lucide-react";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
 import Link from "next/link";
+import { JsonLd } from "@/components/seo/json-ld";
+import { collectionPageSchema, faqSchema, absoluteUrl } from "@/lib/schema";
 
 export const metadata = {
   title: "Insights - Latest Posts",
@@ -101,6 +103,30 @@ export default async function InsightsPage() {
 
   return (
     <div className="container mx-auto px-4 py-8 max-w-4xl">
+      <JsonLd
+        id="schema-insights"
+        data={[
+          collectionPageSchema({
+            name: 'Insights — Latest Articles',
+            description:
+              'Latest posts curated from johndeacon.co.za on semantic systems, metacognition, and alignment frameworks.',
+            keywords: ['Insights', 'Metacognitive Software', 'Semantic Systems'],
+            url: absoluteUrl('/insights'),
+          }),
+          faqSchema([
+            {
+              question: 'Where do these articles come from?',
+              answer:
+                'They are pulled from johndeacon.co.za via the WordPress REST API and presented here for quick browsing.',
+            },
+            {
+              question: 'How often is content updated?',
+              answer:
+                'The feed revalidates approximately hourly to surface the latest published posts.',
+            },
+          ]),
+        ]}
+      />
       {/* Theme Toggle */}
       <div className="flex justify-end mb-4">
         <ThemeToggle />
