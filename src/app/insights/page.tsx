@@ -9,6 +9,8 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { ExternalLink, Mail, MapPin } from "lucide-react";
+import { ThemeToggle } from "@/components/ui/theme-toggle";
+import Link from "next/link";
 
 export const metadata = {
   title: "Insights - Latest Posts",
@@ -85,6 +87,10 @@ export default async function InsightsPage() {
 
   return (
     <div className="container mx-auto px-4 py-8 max-w-4xl">
+      {/* Theme Toggle */}
+      <div className="flex justify-end mb-4">
+        <ThemeToggle />
+      </div>
       {/* Profile Header */}
       <div className="text-center mb-10">
         <Avatar className="w-24 h-24 mx-auto mb-4 border-4 border-primary/20">
@@ -206,16 +212,21 @@ export default async function InsightsPage() {
         </div>
       )}
 
-      <div className="mt-10">
-        <Button asChild>
-          <a
-            href="https://johndeacon.co.za"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Visit Blog
-          </a>
+      <div className="mt-10 flex items-center justify-between flex-wrap gap-3">
+        <Button asChild variant="ghost" className="gap-2">
+          <Link href="/">{/* internal navigation */}
+            ← Back to Home
+          </Link>
         </Button>
+
+        <a
+          href="https://johndeacon.co.za"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-sm text-muted-foreground hover:underline"
+        >
+          Visit full blog on johndeacon.co.za ↗
+        </a>
       </div>
     </div>
   );
