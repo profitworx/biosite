@@ -157,7 +157,7 @@ export default function Home() {
                       Digital Thought Leadership Model for creating meaningful influence through aligned systems.
                     </p>
                     <Button variant="outline" className="w-full" asChild>
-                      <a href="#dtlm">
+                      <a href="/dtlm">
                         Discover DTLM &rarr;
                       </a>
                     </Button>
