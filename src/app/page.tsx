@@ -141,7 +141,7 @@ export default function Home() {
                       Core Alignment Model - a metacognitive framework for structuring Mission, Vision, Strategy, and Tactics.
                     </p>
                     <Button variant="outline" className="w-full" asChild>
-                      <a href="#cam-guide">
+                      <a href="/cam">
                         Learn CAM &rarr;
                       </a>
                     </Button>
