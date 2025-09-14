@@ -194,8 +194,8 @@ export default function Home() {
                       Ongoing thoughts, tools, and frameworks for structured thinking and semantic design.
                     </p>
                     <Button variant="outline" className="w-full" asChild>
-                      <a href="https://johndeacon.co.za" target="_blank" rel="noopener noreferrer">
-                        Visit Blog &rarr;
+                      <a href="/insights">
+                        Latest Insights &rarr;
                       </a>
                     </Button>
                   </CardContent>
