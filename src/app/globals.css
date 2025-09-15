@@ -119,4 +119,14 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  /* Fix heading line height to prevent character clipping */
+  h1, h2, h3, h4, h5, h6 {
+    @apply leading-tight;
+  }
+
+  /* Ensure proper line height for gradient text headings */
+  .bg-gradient-to-r {
+    line-height: 1.2;
+  }
 }

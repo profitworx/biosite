@@ -284,9 +284,11 @@ export default function ToolsPage() {
                 </ul>
               </div>
               <div className="pt-4">
-                <Button className="w-full gap-2" disabled>
-                  <Globe className="w-4 h-4" />
-                  Coming Soon
+                <Button className="w-full gap-2" asChild>
+                  <a href="https://pagematix.com" target="_blank" rel="noopener noreferrer">
+                    <Globe className="w-4 h-4" />
+                    Visit Pagematix
+                  </a>
                 </Button>
               </div>
             </CardContent>

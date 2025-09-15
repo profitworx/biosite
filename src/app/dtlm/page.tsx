@@ -121,19 +121,19 @@ export default function DTLMPage() {
                       </h4>
                       <div className="space-y-4">
                         <div className="bg-background/70 rounded-lg p-4">
-                          <h5 className="font-semibold text-primary mb-2">DefineValueProposition</h5>
+                          <h5 className="font-semibold text-primary mb-2">Define Value Proposition</h5>
                           <p className="text-sm text-muted-foreground">
                             Help users identify what makes them unique and how to communicate that value effectively.
                           </p>
                         </div>
                         <div className="bg-background/70 rounded-lg p-4">
-                          <h5 className="font-semibold text-primary mb-2">DevelopContentStrategy</h5>
+                          <h5 className="font-semibold text-primary mb-2">Develop Content Strategy</h5>
                           <p className="text-sm text-muted-foreground">
                             Guide them to create a content plan with themes, formats, and frequency.
                           </p>
                         </div>
                         <div className="bg-background/70 rounded-lg p-4">
-                          <h5 className="font-semibold text-primary mb-2">CommunityEngagement</h5>
+                          <h5 className="font-semibold text-primary mb-2">Community Engagement</h5>
                           <p className="text-sm text-muted-foreground">
                             Provide methods to grow an online following and foster active engagement.
                           </p>
@@ -208,19 +208,19 @@ export default function DTLMPage() {
                       </h4>
                       <div className="space-y-4">
                         <div className="bg-background/70 rounded-lg p-4">
-                          <h5 className="font-semibold text-primary mb-2">CreatePersonalWebsite</h5>
+                          <h5 className="font-semibold text-primary mb-2">Create Personal Website</h5>
                           <p className="text-sm text-muted-foreground">
                             Teach users how to build a simple, brand-aligned website as a digital anchor.
                           </p>
                         </div>
                         <div className="bg-background/70 rounded-lg p-4">
-                          <h5 className="font-semibold text-primary mb-2">IntegrateDigitalPlatforms</h5>
+                          <h5 className="font-semibold text-primary mb-2">Integrate Digital Platforms</h5>
                           <p className="text-sm text-muted-foreground">
                             Show how to link social profiles and website for consistent messaging.
                           </p>
                         </div>
                         <div className="bg-background/70 rounded-lg p-4">
-                          <h5 className="font-semibold text-primary mb-2">EnhanceVisibilityWithSEO</h5>
+                          <h5 className="font-semibold text-primary mb-2">Enhance Visibility With SEO</h5>
                           <p className="text-sm text-muted-foreground">
                             Provide basics of SEO and analytics to boost visibility.
                           </p>
@@ -295,31 +295,31 @@ export default function DTLMPage() {
                       </h4>
                       <div className="space-y-4">
                         <div className="bg-background/70 rounded-lg p-4">
-                          <h5 className="font-semibold text-primary mb-2">ClarifyPurpose (Mission)</h5>
+                          <h5 className="font-semibold text-primary mb-2">Clarify Purpose (Mission)</h5>
                           <p className="text-sm text-muted-foreground">
                             Help users define their fundamental purpose and values.
                           </p>
                         </div>
                         <div className="bg-background/70 rounded-lg p-4">
-                          <h5 className="font-semibold text-primary mb-2">DefineVision</h5>
+                          <h5 className="font-semibold text-primary mb-2">Define Vision</h5>
                           <p className="text-sm text-muted-foreground">
                             Set long-term, aspirational goals that align with their mission.
                           </p>
                         </div>
                         <div className="bg-background/70 rounded-lg p-4">
-                          <h5 className="font-semibold text-primary mb-2">DevelopStrategicPlan</h5>
+                          <h5 className="font-semibold text-primary mb-2">Develop Strategic Plan</h5>
                           <p className="text-sm text-muted-foreground">
                             Outline the broad methods and platforms they&apos;ll use.
                           </p>
                         </div>
                         <div className="bg-background/70 rounded-lg p-4">
-                          <h5 className="font-semibold text-primary mb-2">ExecuteTactics</h5>
+                          <h5 className="font-semibold text-primary mb-2">Execute Tactics</h5>
                           <p className="text-sm text-muted-foreground">
                             Map out actionable steps to implement strategy, such as content calendar creation.
                           </p>
                         </div>
                         <div className="bg-background/70 rounded-lg p-4">
-                          <h5 className="font-semibold text-primary mb-2">AlignAndReflect</h5>
+                          <h5 className="font-semibold text-primary mb-2">Align And Reflect</h5>
                           <p className="text-sm text-muted-foreground">
                             Create a feedback loop to reassess and make adjustments.
                           </p>
