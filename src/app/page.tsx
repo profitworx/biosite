@@ -437,7 +437,7 @@ export default function Home() {
                       Ongoing thoughts, tools, and frameworks for structured thinking and semantic design.
                     </p>
                     <Button variant="outline" className="w-full" asChild>
-                      <a href="https://johndeacon.co.za" target="_blank" rel="noopener noreferrer">
+                      <a href="/insights">
                         Latest Insights &rarr;
                       </a>
                     </Button>
@@ -622,7 +622,7 @@ export default function Home() {
                     to create monetizable infrastructure and aligned workflows.
                   </p>
                   <Button variant="link" className="p-0 h-auto text-xs" asChild>
-                    <a href="https://johndeacon.co.za" target="_blank" rel="noopener noreferrer">
+                    <a href="/insights">
                       Read Articles &rarr;
                     </a>
                   </Button>
