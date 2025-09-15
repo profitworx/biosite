@@ -281,4 +281,12 @@ export default async function InsightsPage() {
 }
 
 
+import type { Metadata } from "next";
 
+export const metadata: Metadata = {
+  title: "Insights",
+  description:
+    "Articles on semantic systems, metacognition, XEMATIX, and CAM.",
+  alternates: { canonical: "/insights" },
+  robots: { index: true, follow: true },
+};

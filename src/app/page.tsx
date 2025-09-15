@@ -7,6 +7,15 @@ import { Linkedin, Mail, ExternalLink, MapPin } from "lucide-react";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
 import { JsonLd } from "@/components/seo/json-ld";
 import Image from "next/image";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Home",
+  description:
+    "John Deacon — Semantic systems architect. Metacognitive software, XEMATIX framework and the Core Alignment Model (CAM).",
+  alternates: { canonical: "/" },
+  robots: { index: true, follow: true },
+};
 
 export default function Home() {
   return (
@@ -672,4 +681,3 @@ export default function Home() {
     </div>
   );
 }
-

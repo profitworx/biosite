@@ -395,3 +395,12 @@ export const metadata: Metadata = {
   );
 }
 
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Core Alignment Model (CAM)",
+  description:
+    "CAM — A metacognitive framework to structure human intent for semantic system alignment.",
+  alternates: { canonical: "/cam" },
+  robots: { index: true, follow: true },
+};

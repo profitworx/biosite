@@ -495,3 +495,12 @@ export const metadata: Metadata = {
   );
 }
 
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "DTLM — Digital Thought Leadership Model",
+  description:
+    "DTLM — Structured approach to digital thought leadership aligned with CAM and XEMATIX.",
+  alternates: { canonical: "/dtlm" },
+  robots: { index: true, follow: true },
+};

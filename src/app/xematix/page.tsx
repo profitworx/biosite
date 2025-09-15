@@ -254,3 +254,12 @@ export const metadata: Metadata = {
   );
 }
 
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "XEMATIX Framework",
+  description:
+    "XEMATIX — Semantic control systems that interpret human intent through structured language and contextual logic.",
+  alternates: { canonical: "/xematix" },
+  robots: { index: true, follow: true },
+};
