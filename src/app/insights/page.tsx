@@ -137,7 +137,7 @@ export default async function InsightsPage() {
           <AvatarImage src="/images/profile-avatar.jpg" alt="John Deacon Profile" />
           <AvatarFallback className="font-bold bg-primary/10">JD</AvatarFallback>
         </Avatar>
-        <h1 className="text-3xl md:text-4xl font-bold mb-3 bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
+        <h1 className="text-3xl md:text-4xl font-bold mb-3 bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent" style={{lineHeight: '1.3', paddingBottom: '0.1em'}}>
           John Deacon
         </h1>
         <p className="text-base md:text-lg text-muted-foreground mb-4 max-w-2xl mx-auto">

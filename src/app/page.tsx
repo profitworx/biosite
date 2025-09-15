@@ -58,7 +58,7 @@ export default function Home() {
             <AvatarFallback className="text-2xl font-bold bg-primary/10">JD</AvatarFallback>
           </Avatar>
           
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent" style={{lineHeight: '1.3', paddingBottom: '0.1em'}}>
             John Deacon
           </h1>
           
@@ -125,7 +125,7 @@ export default function Home() {
           {/* Featured Highlights Section */}
           <Card className="col-span-full bg-gradient-to-br from-primary/5 via-primary/3 to-primary/5 border-primary/20">
             <CardHeader className="text-center">
-              <CardTitle className="text-3xl font-bold bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
+              <CardTitle className="text-3xl font-bold bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent" style={{lineHeight: '1.3', paddingBottom: '0.1em'}}>
                 Design Systems That Think Like You Do
               </CardTitle>
               <CardDescription className="text-lg text-foreground/80 max-w-3xl mx-auto">
