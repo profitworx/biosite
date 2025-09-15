@@ -193,12 +193,12 @@ export default async function InsightsPage() {
           </CardContent>
         </Card>
       ) : (
-        <div className="grid gap-6">
+        <div className="grid gap-6 md:grid-cols-2 auto-rows-fr">
           {posts.map((post) => {
             const tags = extractTags(post);
             const firstPara = italicLeadParagraph(post.content?.rendered);
             return (
-              <Card key={post.id} className="border-primary/10">
+              <Card key={post.id} className="h-full flex flex-col border-primary/10">
                 <CardHeader>
                   <CardTitle className="leading-snug">
                     <a
@@ -213,7 +213,7 @@ export default async function InsightsPage() {
                     {new Date(post.date).toLocaleDateString()}
                   </CardDescription>
                 </CardHeader>
-                <CardContent className="space-y-3">
+                <CardContent className="flex-1 flex flex-col space-y-3">
                   {firstPara ? (
                     <div
                       className="prose dark:prose-invert max-w-none text-sm text-muted-foreground"
@@ -242,8 +242,8 @@ export default async function InsightsPage() {
                       ))}
                     </div>
                   )}
-                  <div>
-                    <Button variant="link" className="p-0 h-auto" asChild>
+                  <div className="mt-auto">
+          <Button variant="link" className="p-0 h-auto" asChild>
                       <a
                         href={post.link}
                         target="_blank"
@@ -279,4 +279,6 @@ export default async function InsightsPage() {
     </div>
   );
 }
+
+
 
