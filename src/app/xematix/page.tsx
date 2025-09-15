@@ -8,7 +8,13 @@ import { ThemeToggle } from "@/components/ui/theme-toggle";
 import { JsonLd } from "@/components/seo/json-ld";
 import { creativeWorkSchema, faqSchema, absoluteUrl } from "@/lib/schema";
 
-export default function XematixPage() {
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "XEMATIX: Metacognitive Framework for Semantic Systems | John Deacon",
+  description: "Bridge natural language, structured logic and contextual reasoning into executable, intent-aligned systems.",
+  alternates: { canonical: absoluteUrl('/xematix') },
+};export default function XematixPage() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <div className="container mx-auto px-4 py-8 max-w-4xl">
@@ -16,7 +22,7 @@ export default function XematixPage() {
           id="schema-xematix"
           data={[
             creativeWorkSchema({
-              name: 'XEMATIX — Metacognitive Framework',
+              name: 'XEMATIX - Metacognitive Framework',
               description:
                 'A metacognitive software framework that bridges natural language, structured logic, and contextual reasoning into executable systems.',
               keywords: ['XEMATIX', 'Metacognition', 'Semantic Systems'],
@@ -247,3 +253,4 @@ export default function XematixPage() {
     </div>
   );
 }
+

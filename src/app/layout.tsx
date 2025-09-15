@@ -16,8 +16,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "John Deacon - Semantic Systems Architect & XEMATIX Founder",
-  description: "Personal brand and biography site for John Deacon - Semantic Systems Architect, XEMATIX Framework Creator, and Digital Thought Leadership Model Developer.",
+  title: "John Deacon | Semantic Systems Architect, XEMATIX and CAM",
+  description:
+    "Metacognitive software, semantic systems, XEMATIX framework and the Core Alignment Model (CAM). Digital thought leadership, intent modeling and alignment.",
 };
 
 export default function RootLayout({
@@ -43,3 +44,4 @@ export default function RootLayout({
     </html>
   );
 }
+

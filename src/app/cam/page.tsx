@@ -9,7 +9,13 @@ import { ThemeToggle } from "@/components/ui/theme-toggle";
 import { JsonLd } from "@/components/seo/json-ld";
 import { creativeWorkSchema, faqSchema, absoluteUrl } from "@/lib/schema";
 
-export default function CAMPage() {
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Core Alignment Model (CAM): Align Purpose to Execution | John Deacon",
+  description: "Metacognitive scaffold for mission, vision, strategy and tactics with continuous awareness to align intent to execution.",
+  alternates: { canonical: absoluteUrl('/cam') },
+};export default function CAMPage() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <div className="container mx-auto px-4 py-8 max-w-4xl">
@@ -388,3 +394,4 @@ export default function CAMPage() {
     </div>
   );
 }
+

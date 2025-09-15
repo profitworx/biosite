@@ -9,7 +9,13 @@ import { ThemeToggle } from "@/components/ui/theme-toggle";
 import { JsonLd } from "@/components/seo/json-ld";
 import { creativeWorkSchema, faqSchema, absoluteUrl } from "@/lib/schema";
 
-export default function DTLMPage() {
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "DTLM: Digital Thought Leadership Model | John Deacon",
+  description: "Toolkit for authentic digital influence: personal branding, digital innovation and alignment grounded in purpose.",
+  alternates: { canonical: absoluteUrl('/dtlm') },
+};export default function DTLMPage() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <div className="container mx-auto px-4 py-8 max-w-4xl">
@@ -488,3 +494,4 @@ export default function DTLMPage() {
     </div>
   );
 }
+

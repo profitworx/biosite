@@ -9,7 +9,13 @@ import { ThemeToggle } from "@/components/ui/theme-toggle";
 import { JsonLd } from "@/components/seo/json-ld";
 import { collectionPageSchema, faqSchema, absoluteUrl } from "@/lib/schema";
 
-export default function ToolsPage() {
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Digital Tools | Automation and Semantic Design | John Deacon",
+  description: "Schema-driven tools, AI automation and microsite templates for creators using semantic, intent-aligned design.",
+  alternates: { canonical: absoluteUrl('/tools') },
+};export default function ToolsPage() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <div className="container mx-auto px-4 py-8 max-w-4xl">
@@ -17,7 +23,7 @@ export default function ToolsPage() {
           id="schema-tools"
           data={[
             collectionPageSchema({
-              name: 'Digital Tools — John Deacon',
+              name: 'Digital Tools - John Deacon',
               description:
                 'Schema-driven tools, automation scripts, and microsite templates aligned with metacognitive software principles.',
               keywords: ['Digital Tools', 'Automation', 'Semantic Design'],
@@ -386,3 +392,4 @@ export default function ToolsPage() {
     </div>
   );
 }
+

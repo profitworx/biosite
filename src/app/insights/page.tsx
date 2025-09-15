@@ -15,9 +15,9 @@ import { JsonLd } from "@/components/seo/json-ld";
 import { collectionPageSchema, faqSchema, absoluteUrl } from "@/lib/schema";
 
 export const metadata = {
-  title: "Insights - Latest Posts",
-  description:
-    "Latest 6 posts from johndeacon.co.za - titles, excerpts, and tags.",
+  title: "Insights | Semantic Systems and Metacognitive Software | John Deacon",
+  description: "Latest articles on semantic systems, metacognitive software, XEMATIX and CAM curated from johndeacon.co.za.",
+  alternates: { canonical: absoluteUrl('/insights') },
 };
 
 type WpRendered = { rendered: string };
@@ -107,7 +107,7 @@ export default async function InsightsPage() {
         id="schema-insights"
         data={[
           collectionPageSchema({
-            name: 'Insights — Latest Articles',
+            name: 'Insights - Latest Articles',
             description:
               'Latest posts curated from johndeacon.co.za on semantic systems, metacognition, and alignment frameworks.',
             keywords: ['Insights', 'Metacognitive Software', 'Semantic Systems'],
@@ -279,3 +279,4 @@ export default async function InsightsPage() {
     </div>
   );
 }
+

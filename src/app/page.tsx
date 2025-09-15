@@ -17,7 +17,7 @@ export default function Home() {
           id="schema-home"
           data={[
             creativeWorkSchema({
-              name: 'John Deacon — Semantic Systems Architect',
+              name: 'John Deacon - Semantic Systems Architect',
               description:
                 'Architecting metacognitive software, semantic systems, and alignment frameworks such as XEMATIX and CAM.',
               keywords: [
@@ -461,3 +461,4 @@ export default function Home() {
     </div>
   );
 }
+
