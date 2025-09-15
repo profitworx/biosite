@@ -421,7 +421,7 @@ export default function Home() {
                       From analogue systems to digital architectures - the path to purposeful transformation.
                     </p>
                     <Button variant="outline" className="w-full" asChild>
-                      <a href="#journey">
+                      <a href="/about#journey">
                         Read Story &rarr;
                       </a>
                     </Button>
@@ -437,7 +437,7 @@ export default function Home() {
                       Ongoing thoughts, tools, and frameworks for structured thinking and semantic design.
                     </p>
                     <Button variant="outline" className="w-full" asChild>
-                      <a href="/insights">
+                      <a href="https://johndeacon.co.za" target="_blank" rel="noopener noreferrer">
                         Latest Insights &rarr;
                       </a>
                     </Button>
@@ -597,8 +597,10 @@ export default function Home() {
                     Building semantic control systems that bridge natural language, structured logic, and contextual reasoning. 
                     Not just another AI feature set, but a foundation for intent-aligned computing.
                   </p>
-                  <Button variant="link" className="p-0 h-auto text-xs">
-                    Learn More &rarr;
+                  <Button variant="link" className="p-0 h-auto text-xs" asChild>
+                    <a href="/xematix">
+                      Learn More &rarr;
+                    </a>
                   </Button>
                 </div>
                 <div className="space-y-2">
@@ -607,8 +609,10 @@ export default function Home() {
                     A metacognitive framework using Mission. Vision. Strategy. Tactics. Conscious Awareness scaffolding 
                     to structure human intent for semantic system alignment.
                   </p>
-                  <Button variant="link" className="p-0 h-auto text-xs">
-                    Explore Framework &rarr;
+                  <Button variant="link" className="p-0 h-auto text-xs" asChild>
+                    <a href="/cam">
+                      Explore Framework &rarr;
+                    </a>
                   </Button>
                 </div>
                 <div className="space-y-2">
@@ -617,8 +621,10 @@ export default function Home() {
                     Helping independent professionals apply structured thinking, automation, and semantic design 
                     to create monetizable infrastructure and aligned workflows.
                   </p>
-                  <Button variant="link" className="p-0 h-auto text-xs">
-                    Read Articles &rarr;
+                  <Button variant="link" className="p-0 h-auto text-xs" asChild>
+                    <a href="https://johndeacon.co.za" target="_blank" rel="noopener noreferrer">
+                      Read Articles &rarr;
+                    </a>
                   </Button>
                 </div>
                 <div className="space-y-2">
@@ -627,8 +633,10 @@ export default function Home() {
                     Schema-driven tools, automation scripts, and microsite templates that save time and generate revenue 
                     for creators who value clarity and control.
                   </p>
-                  <Button variant="link" className="p-0 h-auto text-xs">
-                    View Tools &rarr;
+                  <Button variant="link" className="p-0 h-auto text-xs" asChild>
+                    <a href="/tools">
+                      View Tools &rarr;
+                    </a>
                   </Button>
                 </div>
               </div>
