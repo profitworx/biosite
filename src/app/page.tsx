@@ -6,7 +6,6 @@ import { Separator } from "@/components/ui/separator";
 import { Linkedin, Mail, ExternalLink, MapPin } from "lucide-react";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
 import { JsonLd } from "@/components/seo/json-ld";
-import { creativeWorkSchema, faqSchema, absoluteUrl } from "@/lib/schema";
 import Image from "next/image";
 
 export default function Home() {
@@ -15,37 +14,241 @@ export default function Home() {
       <div className="container mx-auto px-4 py-8 max-w-4xl">
         <JsonLd
           id="schema-home"
-          data={[
-            creativeWorkSchema({
-              name: 'John Deacon - Semantic Systems Architect',
-              description:
-                'Architecting metacognitive software, semantic systems, and alignment frameworks such as XEMATIX and CAM.',
-              keywords: [
-                'Metacognitive Software',
-                'Semantic Systems',
-                'XEMATIX',
-                'Core Alignment Model',
-              ],
-              url: absoluteUrl('/'),
-            }),
-            faqSchema([
+          data={{
+            "@context": "https://schema.org",
+            "@graph": [
               {
-                question: 'Who is John Deacon?',
-                answer:
-                  'A semantic systems architect and digital thought leader focused on metacognitive software and alignment frameworks.',
+                "@type": "Person",
+                "@id": "https://bio.johndeacon.co.za/#john-deacon",
+                "name": "John Deacon",
+                "alternateName": [
+                  "John Deacon — Metacognition Coach",
+                  "John Deacon — Framework Architect"
+                ],
+                "url": "https://bio.johndeacon.co.za/",
+                "image": "https://bio.johndeacon.co.za/static/john-deacon.jpg",
+                "nationality": "South Africa",
+                "address": {
+                  "@type": "PostalAddress",
+                  "addressCountry": "ZA"
+                },
+                "jobTitle": "Metacognition Coach and Framework Architect",
+                "description": "John Deacon is a South Africa–based researcher and digital practitioner focused on cognitive systems, AI, and metacognitive software infrastructure. Creator of the Core Alignment Model (CAM) and the XEMATIX framework for aligning human intent with executable system logic.",
+                "worksFor": {
+                  "@type": "Organization",
+                  "name": "ProfitWorx",
+                  "url": "https://profitworx.com"
+                },
+                "brand": [
+                  {
+                    "@type": "Brand",
+                    "name": "XEMATIX",
+                    "url": "https://bio.johndeacon.co.za/#xematix"
+                  },
+                  {
+                    "@type": "Brand",
+                    "name": "CAM (Core Alignment Model)",
+                    "url": "https://bio.johndeacon.co.za/#cam"
+                  },
+                  {
+                    "@type": "Brand",
+                    "name": "Pagematix",
+                    "url": "https://pagematix.com"
+                  },
+                  {
+                    "@type": "Brand",
+                    "name": "ResumeToBrand",
+                    "url": "https://resumetobrand.com"
+                  }
+                ],
+                "knowsAbout": [
+                  "Metacognition",
+                  "AI cognition and alignment",
+                  "Semantic systems and language objects (ALO)",
+                  "Process automation and workflow engineering",
+                  "Personal brand strategy and digital thought leadership",
+                  "Information marketing and SEO",
+                  "Industrial instrumentation and process control",
+                  "Artisan bread and fermentation (ciabatta)"
+                ],
+                "sameAs": [
+                  "https://www.linkedin.com/in/jdeaconx",
+                  "https://x.com/jdeaconx",
+                  "https://johndeacon.co.za",
+                  "https://ciabatta.co.za",
+                  "https://profitworx.com",
+                  "https://pagematix.com",
+                  "https://resumetobrand.com",
+                  "https://cyberkinesis.com"
+                ],
+                "contactPoint": [
+                  {
+                    "@type": "ContactPoint",
+                    "contactType": "Business inquiries",
+                    "areaServed": "ZA",
+                    "availableLanguage": ["en"]
+                  }
+                ],
+                "hasOccupation": {
+                  "@type": "Occupation",
+                  "name": "Metacognition Coach and Framework Architect",
+                  "skills": [
+                    "CAM framework design and facilitation",
+                    "Metacognitive process control (XEMATIX)",
+                    "Abstract Language Objects (ALO) design",
+                    "AI-assisted content architecture",
+                    "Personal brand strategy and systems thinking"
+                  ],
+                  "occupationLocation": {
+                    "@type": "Country",
+                    "name": "South Africa"
+                  }
+                }
               },
               {
-                question: 'What is XEMATIX?',
-                answer:
-                  'XEMATIX is a metacognitive framework that bridges natural language, structured logic, and contextual reasoning into executable systems.',
+                "@type": "WebSite",
+                "@id": "https://bio.johndeacon.co.za/#website",
+                "url": "https://bio.johndeacon.co.za/",
+                "name": "John Deacon — Bio",
+                "publisher": { "@id": "https://bio.johndeacon.co.za/#john-deacon" },
+                "inLanguage": "en",
+                "about": { "@id": "https://bio.johndeacon.co.za/#john-deacon" },
+                "isFamilyFriendly": true,
+                "potentialAction": [
+                  {
+                    "@type": "ReadAction",
+                    "target": "https://bio.johndeacon.co.za/"
+                  }
+                ],
+                "relatedLink": [
+                  "https://johndeacon.co.za"
+                ],
+                "sameAs": [
+                  "https://johndeacon.co.za"
+                ]
               },
               {
-                question: 'What is the Core Alignment Model (CAM)?',
-                answer:
-                  'CAM is a metacognitive scaffold—Mission, Vision, Strategy, Tactics, and Conscious Awareness—that aligns intent to execution.',
+                "@type": "WebPage",
+                "@id": "https://bio.johndeacon.co.za/#webpage",
+                "url": "https://bio.johndeacon.co.za/",
+                "name": "John Deacon — Personal Digital Thought Leadership",
+                "isPartOf": { "@id": "https://bio.johndeacon.co.za/#website" },
+                "primaryImageOfPage": "https://bio.johndeacon.co.za/static/john-deacon.jpg",
+                "about": { "@id": "https://bio.johndeacon.co.za/#john-deacon" },
+                "speakable": {
+                  "@type": "SpeakableSpecification",
+                  "xpath": [
+                    "/html/head/title",
+                    "/html/body//h1"
+                  ]
+                },
+                "inLanguage": "en"
               },
-            ]),
-          ]}
+              {
+                "@type": "CreativeWork",
+                "@id": "https://bio.johndeacon.co.za/#john-deacon-alo",
+                "name": "John Deacon ALO (Abstract Language Object)",
+                "creator": { "@id": "https://bio.johndeacon.co.za/#john-deacon" },
+                "description": "The John Deacon ALO encodes voice, logic, and frameworks (CAM and XEMATIX) to produce aligned research, briefs, and writing. It structures Mission, Vision, Strategy, Tactics, and Conscious Awareness as a recursive cognitive scaffold for digital thought leadership.",
+                "isPartOf": { "@id": "https://bio.johndeacon.co.za/#website" },
+                "keywords": [
+                  "ALO",
+                  "Core Alignment Model",
+                  "XEMATIX",
+                  "Digital Thought Leadership",
+                  "Semantic Resonance",
+                  "Process Control"
+                ]
+              },
+              {
+                "@type": "FAQPage",
+                "@id": "https://bio.johndeacon.co.za/#faq",
+                "url": "https://bio.johndeacon.co.za/#faq",
+                "mainEntity": [
+                  {
+                    "@type": "Question",
+                    "name": "Who is John Deacon?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "John Deacon is a South Africa–based metacognition coach and framework architect. He created the Core Alignment Model (CAM) and the XEMATIX framework to align human intent with executable system logic, helping professionals and teams turn nuanced thinking into practical outputs."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "What is the Core Alignment Model (CAM)?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "CAM is a structured reasoning framework – Mission, Vision, Strategy, Tactics, with Conscious Awareness as a governing layer – used to map intent to action. It serves as a cognitive scaffold for decision-making, communication, and content creation."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "What is XEMATIX?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "XEMATIX is a metacognitive software infrastructure for process control of cognition. It transforms human input into aligned, executable logic across five layers (Anchor, Projection, Pathway, Actuator, Governor), integrating CAM for recursive alignment."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "What services does John offer?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Primarily information products and AI-assisted frameworks for research, writing, and personal branding. Limited advisory is available by arrangement when it advances rigorous, outcomes-based work aligned to CAM and XEMATIX."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "Where is John based?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "South Africa. John works globally through digital channels, with a focus on practical, implementation-ready outputs."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "Does John do hands-on consulting or only products?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "The focus is on information marketing and structured frameworks. Select, time-bound advisory or collaboration can be arranged when there is strong strategic fit."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "What is an Abstract Language Object (ALO)?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "An ALO is a structured representation of voice, logic, and method that encodes how a professional thinks. John's ALO integrates CAM and XEMATIX to generate aligned research, briefs, and writing with consistent strategic DNA."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "Where can I read John's latest writing?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Visit the related blog at https://johndeacon.co.za for articles on metacognition, AI cognition, semantic systems, and practical workflows."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "What audiences benefit most from John's work?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Corporate professionals and thought leaders seeking to turn nuanced thinking into repeatable systems – e.g., brand strategy, AI-assisted content pipelines, and decision frameworks grounded in CAM."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "How does CAM connect to AI or automation?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "CAM is used as a control scaffold inside XEMATIX to align intent with system execution. It reduces drift, clarifies outcomes, and keeps automation accountable to Mission and Vision."
+                    }
+                  }
+                ]
+              }
+            ]
+          }}
         />
         {/* Theme Toggle */}
         <div className="flex justify-end mb-4">
