@@ -5,7 +5,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { JsonLd } from "@/components/seo/json-ld";
 import { personSchema } from "@/lib/schema";
 // Prefer explicit site URL via env for canonicals and OG tags
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://example.com";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://bio.johndeacon.co.za";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

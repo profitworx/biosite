@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://example.com";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://bio.johndeacon.co.za";
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -11,4 +11,3 @@ export default function robots(): MetadataRoute.Robots {
     sitemap: `${SITE_URL.replace(/\/$/, "")}/sitemap.xml`,
   };
 }
-
