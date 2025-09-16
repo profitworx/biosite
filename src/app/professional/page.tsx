@@ -85,7 +85,7 @@ export default function ProfessionalPage() {
         <Card className="mb-8 bg-gradient-to-br from-primary/5 via-primary/3 to-primary/5 border-primary/20">
           <CardContent className="p-8">
             <p className="text-lg text-muted-foreground leading-relaxed mb-4">
-              AI doesn't fix broken strategy—it amplifies it. Most companies bolt shiny tools onto brittle processes and call it innovation.
+              AI doesn&apos;t fix broken strategy - it amplifies it. Most companies bolt shiny tools onto brittle processes and call it innovation.
             </p>
             <p className="text-muted-foreground leading-relaxed">
               The result? Millions burned, customers frustrated, teams demoralized, and leadership still wondering why performance lags.
@@ -105,35 +105,35 @@ export default function ProfessionalPage() {
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-6 text-muted-foreground leading-relaxed">
-            <p>Most companies don't have a technology problem—they have an alignment problem.</p>
+            <p>Most companies don&apos;t have a technology problem - they have an alignment problem.</p>
             <p>
-              AI has exposed this brutally: automate a broken process, and you break it faster. Cut staff to appear "efficient," and you accelerate dysfunction. The truth is simple: technology amplifies what already exists—whether that's clarity or chaos.
+              AI has exposed this brutally: automate a broken process, and you break it faster. Cut staff to appear &quot;efficient,&quot; and you accelerate dysfunction. The truth is simple: technology amplifies what already exists - whether that&apos;s clarity or chaos.
             </p>
             <p>
-              Digital Performance Management is about discipline before digital. Fix the fundamentals—Mission, Vision, Strategy, and Tactics—before layering on AI or automation.
+              Digital Performance Management is about discipline before digital. Fix the fundamentals - Mission, Vision, Strategy, and Tactics - before layering on AI or automation.
             </p>
             <div>
               <h4 className="font-semibold text-primary uppercase tracking-wide text-sm">My Approach</h4>
               <ul className="mt-2 space-y-2 list-disc list-inside">
-                <li><strong>Mission</strong> — Identify the real problem behind the noise.</li>
-                <li><strong>Vision</strong> — Define outcomes that matter, not vanity metrics.</li>
-                <li><strong>Strategy</strong> — Map process integrity before automation.</li>
-                <li><strong>Tactics</strong> — Deploy digital tools that make top performers win bigger, not prop up weak systems.</li>
-                <li><strong>Conscious Awareness</strong> — Continuously monitor alignment so every initiative drives value.</li>
+                <li><strong>Mission</strong> - Identify the real problem behind the noise.</li>
+                <li><strong>Vision</strong> - Define outcomes that matter, not vanity metrics.</li>
+                <li><strong>Strategy</strong> - Map process integrity before automation.</li>
+                <li><strong>Tactics</strong> - Deploy digital tools that make top performers win bigger, not prop up weak systems.</li>
+                <li><strong>Conscious Awareness</strong> - Continuously monitor alignment so every initiative drives value.</li>
               </ul>
             </div>
             <div>
               <h4 className="font-semibold text-primary uppercase tracking-wide text-sm">Why This Matters Now</h4>
               <ul className="mt-2 space-y-2 list-disc list-inside">
                 <li>Companies have burned $400M+ on failed AI projects by skipping this step.</li>
-                <li>Leaders face pressure to "go AI" but lack frameworks to measure ROI beyond pilot hype.</li>
-                <li>Boards and investors demand quarterly results, not multi-year promises—alignment is the only way to deliver.</li>
+                <li>Leaders face pressure to &quot;go AI&quot; but lack frameworks to measure ROI beyond pilot hype.</li>
+                <li>Boards and investors demand quarterly results, not multi-year promises - alignment is the only way to deliver.</li>
               </ul>
             </div>
             <div>
               <h4 className="font-semibold text-primary uppercase tracking-wide text-sm">The XEMATIX Edge</h4>
               <p className="mt-2">
-                XEMATIX is my metacognitive process control framework. It doesn't promise AI magic—it keeps every digital initiative tethered to intent, process integrity, and measurable outcomes.
+                XEMATIX is my metacognitive process control framework. It doesn&apos;t promise AI magic - it keeps every digital initiative tethered to intent, process integrity, and measurable outcomes.
               </p>
             </div>
             <div className="space-y-2 font-medium text-foreground">
@@ -145,7 +145,7 @@ export default function ProfessionalPage() {
             <div>
               <h4 className="font-semibold text-primary uppercase tracking-wide text-sm">Call to Action</h4>
               <p className="mt-2 font-semibold text-foreground">
-                If you're ready to stop burning money on hype and start building durable performance, I help leaders embed alignment into every digital decision.
+                If you&apos;re ready to stop burning money on hype and start building durable performance, I help leaders embed alignment into every digital decision.
               </p>
             </div>
           </CardContent>
@@ -160,7 +160,7 @@ export default function ProfessionalPage() {
           <Card className="border-primary/20">
             <CardContent className="p-6 text-muted-foreground leading-relaxed">
               <p>
-                I architect Digital Performance Strategy at the level that matters—aligning <strong>Mission</strong>, <strong>Vision</strong>, <strong>Strategy</strong>, <strong>Tactics</strong>, and <strong>Conscious Awareness</strong> through my Core Alignment Model (CAM).
+                I architect Digital Performance Strategy at the level that matters - aligning <strong>Mission</strong>, <strong>Vision</strong>, <strong>Strategy</strong>, <strong>Tactics</strong>, and <strong>Conscious Awareness</strong> through my Core Alignment Model (CAM).
               </p>
               <p className="mt-3">
                 With this foundation, digital systems stop being vanity projects and start becoming performance engines.
@@ -184,7 +184,7 @@ export default function ProfessionalPage() {
                 <CardDescription className="font-semibold text-base">CAM builds the foundation</CardDescription>
               </CardHeader>
               <CardContent className="text-muted-foreground leading-relaxed">
-                CAM ensures processes work before they're optimized. Fix the flow, then scale it.
+                CAM ensures processes work before they&apos;re optimized. Fix the flow, then scale it.
               </CardContent>
             </Card>
             <Card className="border-primary/20 hover:border-primary/40 transition-colors">
@@ -196,7 +196,7 @@ export default function ProfessionalPage() {
                 <CardDescription className="font-semibold text-base">XEMATIX as leverage</CardDescription>
               </CardHeader>
               <CardContent className="text-muted-foreground leading-relaxed">
-                XEMATIX, my metacognitive process control system, gives top performers exponential leverage—not band‑aids for dysfunction.
+                XEMATIX, my metacognitive process control system, gives top performers exponential leverage - not band-aids for dysfunction.
               </CardContent>
             </Card>
             <Card className="border-primary/20 hover:border-primary/40 transition-colors">
@@ -222,7 +222,7 @@ export default function ProfessionalPage() {
           <Card className="bg-gradient-to-br from-primary/10 via-primary/5 to-primary/10 border-primary/30">
             <CardContent className="p-8 text-muted-foreground leading-relaxed">
               <p>
-                I've spent two decades at the intersection of automation, cognitive systems, and performance architecture. While others chase "AI‑ready" slogans, I design <strong>AI‑native operating systems</strong>—where intent, process, and technology interlock.
+                I&apos;ve spent two decades at the intersection of automation, cognitive systems, and performance architecture. While others chase &quot;AI-ready&quot; slogans, I design <strong>AI-native operating systems</strong> - where intent, process, and technology interlock.
               </p>
             </CardContent>
           </Card>
@@ -243,7 +243,7 @@ export default function ProfessionalPage() {
                 <CardDescription className="font-semibold text-base">Foundation scan</CardDescription>
               </CardHeader>
               <CardContent className="text-muted-foreground leading-relaxed">
-                A clear map of your digital foundation: what’s working, what’s broken, and what needs realignment.
+                A clear map of your digital foundation: what&apos;s working, what&apos;s broken, and what needs realignment.
               </CardContent>
             </Card>
             <Card className="border-primary/20 hover:border-primary/40 transition-colors">
@@ -255,7 +255,7 @@ export default function ProfessionalPage() {
                 <CardDescription className="font-semibold text-base">Excellence, scaled</CardDescription>
               </CardHeader>
               <CardContent className="text-muted-foreground leading-relaxed">
-                A strategy that uses AI to amplify excellence—not a band‑aid for dysfunction.
+                A strategy that uses AI to amplify excellence - not a band-aid for dysfunction.
               </CardContent>
             </Card>
             <Card className="border-primary/20 hover:border-primary/40 transition-colors">
@@ -267,7 +267,7 @@ export default function ProfessionalPage() {
                 <CardDescription className="font-semibold text-base">Built to scale</CardDescription>
               </CardHeader>
               <CardContent className="text-muted-foreground leading-relaxed">
-                A performance architecture you can trust to scale—not just another tool deployment.
+                A performance architecture you can trust to scale - not just another tool deployment.
               </CardContent>
             </Card>
           </div>
