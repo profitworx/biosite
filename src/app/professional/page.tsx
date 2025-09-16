@@ -1,8 +1,9 @@
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { Badge } from "@/components/ui/badge";
-import { ArrowLeft, Gauge, Activity, Target, Layers, Rocket, CheckCircle2, ExternalLink } from "lucide-react";
+import { ArrowLeft, Gauge, Activity, Target, Layers, Rocket, CheckCircle2, ExternalLink, Mail, MapPin } from "lucide-react";
 import Link from "next/link";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
 import { JsonLd } from "@/components/seo/json-ld";
@@ -66,21 +67,46 @@ export default function ProfessionalPage() {
           </Button>
         </div>
 
-        {/* Header */}
+        {/* Professional Header */}
         <div className="text-center mb-12">
-          <h1 className="text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
+          <Avatar className="w-24 h-24 mx-auto mb-4 border-4 border-primary/20">
+            <AvatarImage src="/images/profile-avatar.jpg" alt="John Deacon" />
+            <AvatarFallback className="font-bold bg-primary/10">JD</AvatarFallback>
+          </Avatar>
+          <h1
+            className="text-4xl md:text-5xl font-bold mb-3 bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent"
+            style={{ lineHeight: "1.3", paddingBottom: "0.1em" }}
+          >
             Digital Performance Strategy
           </h1>
-          <p className="text-2xl text-muted-foreground mb-4 max-w-3xl mx-auto">
-            The Brutal Truth About AI and Performance
+          <p className="text-base md:text-lg text-muted-foreground mb-4 max-w-2xl mx-auto">
+            Discipline before digital. Align mission, vision, strategy, tactics, and conscious awareness before automation or AI.
           </p>
-          <div className="flex justify-center gap-2 mb-6">
-            <Badge variant="secondary">Alignment</Badge>
-            <Badge variant="secondary">Evidence</Badge>
-            <Badge variant="secondary">AI-Native</Badge>
+          <div className="flex flex-wrap justify-center gap-2 mb-4">
+            <Badge variant="secondary">Digital Performance Management</Badge>
+            <Badge variant="secondary">Core Alignment Model</Badge>
+            <Badge variant="secondary">XEMATIX</Badge>
+            <Badge variant="secondary">AI Governance</Badge>
+          </div>
+          <div className="flex justify-center items-center gap-2 text-sm text-muted-foreground mb-6">
+            <MapPin className="w-4 h-4" />
+            <span>Kenton-on-Sea, Eastern Cape, South Africa</span>
+          </div>
+          <div className="flex justify-center gap-3">
+            <Button variant="default" className="gap-2" asChild>
+              <a href="mailto:john@profitworx.com">
+                <Mail className="w-4 h-4" />
+                Start Alignment
+              </a>
+            </Button>
+            <Button variant="outline" className="gap-2" asChild>
+              <Link href="/cam">
+                <ExternalLink className="w-4 h-4" />
+                Explore CAM
+              </Link>
+            </Button>
           </div>
         </div>
-
         {/* Truth */}
         <Card className="mb-8 bg-gradient-to-br from-primary/5 via-primary/3 to-primary/5 border-primary/20">
           <CardContent className="p-8">
