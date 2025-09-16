@@ -105,9 +105,9 @@ export default function ProfessionalPage() {
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-6 text-muted-foreground leading-relaxed">
-            <p>Most companies don't have a technology problem. They have an alignment problem.</p>
+            <p>Most companies don&apos;t have a technology problem. They have an alignment problem.</p>
             <p>
-              AI has exposed this brutally: automate a broken process, and you only break it faster. Fire people to look "efficient," and you just accelerate dysfunction. The truth is simple: technology amplifies what already exists - whether that's clarity or chaos.
+              AI has exposed this brutally: automate a broken process, and you only break it faster. Fire people to look &quot;efficient,&quot; and you just accelerate dysfunction. The truth is simple: technology amplifies what already exists - whether that&apos;s clarity or chaos.
             </p>
             <p>
               Digital Performance Management is about discipline before digital. Fix the fundamentals - Mission, Vision, Strategy, and Tactics - before layering on AI or automation.
@@ -126,14 +126,14 @@ export default function ProfessionalPage() {
               <h4 className="font-semibold text-primary uppercase tracking-wide text-sm">Why This Matters Now</h4>
               <ul className="mt-2 space-y-2 list-disc list-inside">
                 <li>Companies burned $400M+ on failed AI projects because they skipped this step.</li>
-                <li>Leaders are under pressure to "go AI" but lack a framework to measure ROI beyond pilot hype.</li>
+                <li>Leaders are under pressure to &quot;go AI&quot; but lack a framework to measure ROI beyond pilot hype.</li>
                 <li>Boards and investors demand results in quarters, not years - alignment is the only way to deliver.</li>
               </ul>
             </div>
             <div>
               <h4 className="font-semibold text-primary uppercase tracking-wide text-sm">The XEMATIX Edge</h4>
               <p className="mt-2">
-                XEMATIX is my metacognitive process control framework. It doesn't promise AI magic - it keeps every digital initiative tethered to intent, process integrity, and measurable outcomes.
+                XEMATIX is my metacognitive process control framework. It doesn&apos;t promise AI magic - it keeps every digital initiative tethered to intent, process integrity, and measurable outcomes.
               </p>
             </div>
             <div className="space-y-2 font-medium text-foreground">
@@ -145,7 +145,7 @@ export default function ProfessionalPage() {
             <div>
               <h4 className="font-semibold text-primary uppercase tracking-wide text-sm">Call to Action</h4>
               <p className="mt-2 font-semibold text-foreground">
-                If you're ready to stop burning money on hype and build durable performance, I help leaders embed alignment into every digital decision.
+                If you&apos;re ready to stop burning money on hype and build durable performance, I help leaders embed alignment into every digital decision.
               </p>
             </div>
           </CardContent>

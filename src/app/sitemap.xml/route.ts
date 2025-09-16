@@ -1,5 +1,3 @@
-import { NextRequest } from "next/server";
-
 const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || "https://bio.johndeacon.co.za").replace(/\/$/, "");
 
 const routes: Array<{
@@ -31,7 +29,7 @@ ${urls}
 </urlset>`;
 }
 
-export async function GET(_req: NextRequest) {
+export async function GET() {
   const xml = generateSitemapXml();
   return new Response(xml, {
     status: 200,

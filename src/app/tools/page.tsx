@@ -392,13 +392,3 @@ export const metadata: Metadata = {
     </div>
   );
 }
-
-import type { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "Tools",
-  description:
-    "Schema-driven tools, automation scripts, and microsite templates for digital independence.",
-  alternates: { canonical: "/tools" },
-  robots: { index: true, follow: true },
-};
