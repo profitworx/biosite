@@ -389,7 +389,7 @@ export default function ProfessionalPage() {
             </div>
             <Separator className="my-4" />
             <div>
-              <h4 className="font-semibold text-primary uppercase tracking-wide text-sm">Call to Action</h4>
+              <h4 className="font-semibold text-primary uppercase tracking-wide text-sm">Follow</h4>
               <p className="mt-2 font-semibold text-foreground">
                 If you&apos;re ready to stop burning money on hype and start building durable performance, I help leaders embed alignment into every digital decision.
               </p>
