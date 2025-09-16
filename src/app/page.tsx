@@ -3,10 +3,11 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
-import { Linkedin, Mail, ExternalLink, MapPin } from "lucide-react";
+import { Linkedin, Mail, ExternalLink, MapPin, Briefcase } from "lucide-react";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
 import { JsonLd } from "@/components/seo/json-ld";
 import Image from "next/image";
+import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -294,10 +295,10 @@ export default function Home() {
           
           <div className="flex justify-center gap-4">
             <Button variant="default" size="lg" className="gap-2" asChild>
-              <a href="mailto:john@profitworx.com">
-                <Mail className="w-4 h-4" />
-                Get In Touch
-              </a>
+              <Link href="/professional">
+                <Briefcase className="w-4 h-4" />
+                Work
+              </Link>
             </Button>
             <Button variant="outline" size="lg" className="gap-2" asChild>
               <a href="https://johndeacon.co.za" target="_blank" rel="noopener noreferrer">

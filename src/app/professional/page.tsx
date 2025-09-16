@@ -93,6 +93,64 @@ export default function ProfessionalPage() {
           </CardContent>
         </Card>
 
+        {/* Digital Performance Management */}
+        <Card className="mb-12 border-primary/25 bg-gradient-to-br from-background via-primary/5 to-primary/10">
+          <CardHeader className="space-y-2">
+            <div className="flex items-center gap-2 text-primary">
+              <Gauge className="w-5 h-5" />
+              <CardTitle className="text-2xl">Digital Performance Management</CardTitle>
+            </div>
+            <CardDescription className="text-base">
+              Aligning strategy, process, and technology for measurable results.
+            </CardDescription>
+          </CardHeader>
+          <CardContent className="space-y-6 text-muted-foreground leading-relaxed">
+            <p>Most companies don't have a technology problem. They have an alignment problem.</p>
+            <p>
+              AI has exposed this brutally: automate a broken process, and you only break it faster. Fire people to look "efficient," and you just accelerate dysfunction. The truth is simple: technology amplifies what already exists - whether that's clarity or chaos.
+            </p>
+            <p>
+              Digital Performance Management is about discipline before digital. Fix the fundamentals - Mission, Vision, Strategy, and Tactics - before layering on AI or automation.
+            </p>
+            <div>
+              <h4 className="font-semibold text-primary uppercase tracking-wide text-sm">My Approach</h4>
+              <ul className="mt-2 space-y-2 list-disc list-inside">
+                <li><strong>Mission</strong> - Identify the real problem behind the noise.</li>
+                <li><strong>Vision</strong> - Define outcomes that matter, not vanity metrics.</li>
+                <li><strong>Strategy</strong> - Map process integrity before automation.</li>
+                <li><strong>Tactics</strong> - Deploy digital tools that make top performers win bigger, not prop up weak systems.</li>
+                <li><strong>Conscious Awareness</strong> - Continuously monitor alignment so every initiative drives value.</li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-semibold text-primary uppercase tracking-wide text-sm">Why This Matters Now</h4>
+              <ul className="mt-2 space-y-2 list-disc list-inside">
+                <li>Companies burned $400M+ on failed AI projects because they skipped this step.</li>
+                <li>Leaders are under pressure to "go AI" but lack a framework to measure ROI beyond pilot hype.</li>
+                <li>Boards and investors demand results in quarters, not years - alignment is the only way to deliver.</li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-semibold text-primary uppercase tracking-wide text-sm">The XEMATIX Edge</h4>
+              <p className="mt-2">
+                XEMATIX is my metacognitive process control framework. It doesn't promise AI magic - it keeps every digital initiative tethered to intent, process integrity, and measurable outcomes.
+              </p>
+            </div>
+            <div className="space-y-2 font-medium text-foreground">
+              <p>Where others chase tools, we manage cognition.</p>
+              <p>Where others amplify dysfunction, we engineer alignment.</p>
+              <p>That is Digital Performance Management done right.</p>
+            </div>
+            <Separator className="my-4" />
+            <div>
+              <h4 className="font-semibold text-primary uppercase tracking-wide text-sm">Call to Action</h4>
+              <p className="mt-2 font-semibold text-foreground">
+                If you're ready to stop burning money on hype and build durable performance, I help leaders embed alignment into every digital decision.
+              </p>
+            </div>
+          </CardContent>
+        </Card>
+
         {/* Where I Operate */}
         <div className="mb-10">
           <div className="flex items-center justify-center gap-3 mb-4">
