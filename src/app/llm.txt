@@ -3,7 +3,7 @@
 # Purpose: Help AI crawlers understand the semantic structure and reasoning model behind this website
 
 {
-  "llm_manifest_version": "1.0",
+  "xematix_llm_manifest_version": "1.0",
   "site_title": "John Deacon - Digital-First Metacognitive Brand Strategy",
   "site_url": "https://bio.johndeacon.co.za",
   "site_author": "John Deacon",
