@@ -1,24 +1,44 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# John Deacon Bio - Personal Portfolio & AI-Enabled Biography
+
+A modern, AI-powered personal biography and portfolio website built with Next.js 15 and TypeScript. This site showcases John Deacon's work in semantic systems architecture, cognitive interface design, and the XEMATIX framework.
+
+## Features
+
+- **Modern Tech Stack**: Next.js 15 with App Router, TypeScript, Tailwind CSS 4
+- **AI Integration**: MCP (Model Context Protocol) endpoints for AI-powered interactions
+- **Semantic SEO**: Comprehensive structured data and SEO optimization
+- **Dark/Light Theme**: Built-in theme switching with `next-themes`
+- **Responsive Design**: Mobile-first design with shadcn/ui components
+
+## Key Technologies
+
+- **Framework**: Next.js 15 with App Router
+- **Styling**: Tailwind CSS 4 + shadcn/ui components
+- **TypeScript**: Strict mode enabled
+- **MCP Integration**: AI tool endpoints via mcp-handler
+- **Schema Validation**: Zod for API validation
+- **UI Components**: Radix UI primitives via shadcn/ui
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+# Install dependencies
+npm install
+
+# Start development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Build for production
+npm run build
+
+# Start production server
+npm start
+
+# Run linting
+npm run lint
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Open [http://localhost:3000](http://localhost:3000) to view the site.
 
 ## SEO, Robots, and Sitemap
 
@@ -39,17 +59,77 @@ This project uses [`next/font`](https://nextjs.org/docs/app/building-your-applic
 - Open Graph and Twitter card metadata are configured globally in `src/app/layout.tsx`. Update titles/descriptions if needed.
 - If you add new top-level routes, update `src/app/sitemap.ts` with the new paths.
 
-## Learn More
+## Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+src/
+├── app/                          # Next.js App Router
+│   ├── api/                      # API endpoints
+│   │   ├── [transport]/          # Public MCP endpoints
+│   │   └── protected/[transport]/ # Protected MCP endpoints
+│   ├── cam/                      # Core Alignment Model page
+│   ├── dtlm/                     # Digital Thought Leadership page
+│   ├── insights/                 # Insights/blog page
+│   ├── professional/             # Professional page
+│   ├── tools/                    # Tools page
+│   ├── xematix/                  # XEMATIX framework page
+│   ├── layout.tsx               # Root layout
+│   ├── page.tsx                 # Home page
+│   ├── robots.ts                # Dynamic robots.txt
+│   └── sitemap.xml/route.ts     # Dynamic sitemap
+├── components/
+│   ├── seo/                     # SEO components (JSON-LD)
+│   ├── ui/                      # shadcn/ui components
+│   └── theme-provider.tsx       # Theme provider
+└── lib/
+    ├── schema.ts               # Zod validation schemas
+    └── utils.ts                # Utility functions
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## MCP (Model Context Protocol) Integration
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The site exposes AI tool endpoints for enhanced interaction:
 
-## Deploy on Vercel
+### Public API (`/api/[transport]`)
+- `submit_contact` - Process contact form submissions
+- `generate_content_ideas` - Generate thought leadership content
+- `analyze_professional_profile` - Professional positioning analysis
+- `generate_industry_insights` - Industry trend insights
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Protected API (`/api/protected/[transport]`)
+- `update_biography_content` - Admin content management
+- `get_site_analytics` - Site analytics access
+- `manage_thought_leadership` - Content publication management
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Testing MCP Endpoints
+
+```bash
+# Test public MCP endpoint
+curl -X GET "http://localhost:3000/api/mcp"
+
+# Test protected MCP endpoint
+curl -X GET "http://localhost:3000/api/protected/mcp" \
+  -H "Authorization: Bearer bio_admin_test"
+
+# Submit contact form
+curl -X POST "http://localhost:3000/api/mcp" \
+  -H "Content-Type: application/json" \
+  -d '{"method": "tools/call", "params": {"name": "submit_contact", "arguments": {"name": "Test", "email": "test@example.com", "subject": "Test", "message": "Test message"}}}'
+```
+
+## Deployment
+
+The site is optimized for deployment on Vercel with:
+- Automatic builds on push
+- Environment variable support for `NEXT_PUBLIC_SITE_URL`
+- Built-in sitemap and robots.txt generation
+- Optimized image handling and caching
+
+## About John Deacon
+
+John Deacon is a South Africa-based semantic systems architect and the creator of:
+- **XEMATIX**: Cognitive interface architecture for intent-aligned computing
+- **CAM (Core Alignment Model)**: Metacognitive framework for structured thinking
+- **DTLM**: Digital Thought Leadership methodology
+
+For more information, visit [johndeacon.co.za](https://johndeacon.co.za)

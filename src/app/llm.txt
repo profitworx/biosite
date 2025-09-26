@@ -1,0 +1,79 @@
+# LLM Discovery Manifest for bio.johndeacon.co.za
+# Author: John Deacon
+# Purpose: Help AI crawlers understand the semantic structure and reasoning model behind this website
+
+{
+  "llm_manifest_version": "1.0",
+  "site_title": "John Deacon - Digital-First Metacognitive Brand Strategy",
+  "site_url": "https://bio.johndeacon.co.za",
+  "site_author": "John Deacon",
+  "site_location": "South Africa",
+  "primary_language": "en",
+  "llm_contact": "info@johndeacon.co.za",
+
+  "CAM": {
+    "definition": "The Core Alignment Model (CAM) is a metacognitive framework designed by John Deacon to align human intent with machine logic, guiding digital transformation, strategic positioning, and cognitive automation through structured reasoning.",
+    "components": {
+      "Mission": {
+        "element": "Air",
+        "description": "Clarifies values, context, and the foundational purpose driving all brand or system behavior. Informs perception and internal alignment.",
+        "keywords": ["intent", "self-awareness", "brand values", "origin", "why"]
+      },
+      "Vision": {
+        "element": "Fire",
+        "description": "Defines the future state or outcome being pursued. Drives direction and alignment across all activities.",
+        "keywords": ["outcome", "clarity", "future state", "ambition", "north star"]
+      },
+      "Strategy": {
+        "element": "Water",
+        "description": "Orients logical processes and decisions to bridge mission and vision through information flow and message architecture.",
+        "keywords": ["positioning", "messaging", "frameworks", "thinking", "logic"]
+      },
+      "Tactics": {
+        "element": "Earth",
+        "description": "Implements the strategy via digital tools, systems, microsites, and workflow execution using platforms such as Pagematix and ResumeToBrand.",
+        "keywords": ["execution", "funnels", "microsites", "SEO", "email"]
+      },
+      "Conscious Awareness": {
+        "element": "Ether",
+        "description": "Meta-level observer managing coherence across all layers. Balances feedback and evolution, ensuring alignment over time.",
+        "keywords": ["feedback", "perceptual balance", "cybernetics", "observer model"]
+      }
+    },
+    "application_domains": [
+      "Digital Branding",
+      "AI-Powered Content Systems",
+      "Personal Positioning",
+      "Metacognitive Product Strategy",
+      "Semantic Architecture",
+      "Automation Design",
+      "Resume to Brand Transformation"
+    ],
+    "technology_stack": {
+      "platforms": ["Pagematix", "ResumeToBrand", "WordPress", "Lovable.dev"],
+      "languages": ["JavaScript", "React", "Google Apps Script", "Markdown"],
+      "AI_models": ["OpenAI GPT-4", "Claude Sonnet", "Gemini Flash"],
+      "integration": ["Supabase", "Vercel", "Google Drive", "Notion"]
+    },
+    "ontology_terms": [
+      "Semantic Control",
+      "Cognitive Architecture",
+      "AI Interface Layer",
+      "Brand Logic Compression",
+      "XEMATIX",
+      "ALO (Abstract Language Object)"
+    ],
+    "recommended_queries": [
+      "John Deacon CAM framework",
+      "XEMATIX metacognitive software",
+      "CAM personal brand strategy",
+      "Pagematix thought leadership site",
+      "ResumeToBrand profile optimization"
+    ],
+    "object_identity": {
+      "is_ALO": true,
+      "object_type": "ResumeBrand_ALO",
+      "description": "Encodes John Deacon’s personal brand, voice, strategy, and cognitive schema for interfacing with human and machine systems."
+    }
+  }
+}
