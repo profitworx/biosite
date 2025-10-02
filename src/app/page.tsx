@@ -12,9 +12,9 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "John Deacon | Semantic Systems Architect, XEMATIX & CAM",
-  /* description:
+  description_legacy:
     "John Deacon — Semantic systems architect. Metacognitive software, XEMATIX framework and the Core Alignment Model (CAM).",
-*/  alternates: { canonical: "/" },
+  alternates: { canonical: "/" },
   robots: { index: true, follow: true },
   openGraph: {
     type: "website",
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     "Intent Modeling",
     "Digital Thought Leadership",
   ],
-  // description:
+  description:
     "Semantic systems architect focused on metacognitive software, the XEMATIX framework, and the Core Alignment Model (CAM) for aligning human intent with executable system logic.",
 };
 
