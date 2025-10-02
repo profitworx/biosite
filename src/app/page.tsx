@@ -48,8 +48,6 @@ export const metadata: Metadata = {
     "Intent Modeling",
     "Digital Thought Leadership",
   ],
-  description:
-    "Semantic systems architect focused on metacognitive software, the XEMATIX framework, and the Core Alignment Model (CAM) for aligning human intent with executable system logic.",
 };
 
 export default function Home() {
