@@ -11,11 +11,45 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Home",
-  description:
+  title: "John Deacon | Semantic Systems Architect, XEMATIX & CAM",
+  /* description:
     "John Deacon — Semantic systems architect. Metacognitive software, XEMATIX framework and the Core Alignment Model (CAM).",
-  alternates: { canonical: "/" },
+*/  alternates: { canonical: "/" },
   robots: { index: true, follow: true },
+  openGraph: {
+    type: "website",
+    url: "/",
+    title: "John Deacon | Semantic Systems Architect, XEMATIX & CAM",
+    description:
+      "Metacognitive software, semantic systems, XEMATIX framework, and the Core Alignment Model (CAM).",
+    images: [
+      {
+        url: "/images/john-deacon-featured.png",
+        width: 1200,
+        height: 630,
+        alt: "John Deacon",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "John Deacon | Semantic Systems Architect",
+    description:
+      "Metacognitive software, semantic systems, XEMATIX framework, and CAM.",
+    images: ["/images/john-deacon-featured.png"],
+  },
+  keywords: [
+    "John Deacon",
+    "Semantic Systems",
+    "XEMATIX",
+    "Core Alignment Model",
+    "CAM",
+    "Metacognition",
+    "Intent Modeling",
+    "Digital Thought Leadership",
+  ],
+  // description:
+    "Semantic systems architect focused on metacognitive software, the XEMATIX framework, and the Core Alignment Model (CAM) for aligning human intent with executable system logic.",
 };
 
 export default function Home() {
@@ -256,6 +290,46 @@ export default function Home() {
                     }
                   }
                 ]
+              }
+            ]
+          }}
+        />
+        <JsonLd
+          id="schema-home-clean"
+          data={{
+            "@context": "https://schema.org",
+            "@graph": [
+              {
+                "@type": "Person",
+                "@id": "https://bio.johndeacon.co.za/#john-deacon",
+                "name": "John Deacon",
+                "alternateName": [
+                  "John Deacon - Metacognition Coach",
+                  "John Deacon - Framework Architect"
+                ],
+                "url": "https://bio.johndeacon.co.za/",
+                "image": "https://bio.johndeacon.co.za/static/john-deacon.jpg",
+                "nationality": "South Africa",
+                "address": { "@type": "PostalAddress", "addressCountry": "ZA" },
+                "jobTitle": "Metacognition Coach and Framework Architect",
+                "description": "John Deacon is a South Africa-based researcher and digital practitioner focused on cognitive systems, AI, and metacognitive software infrastructure. Creator of the Core Alignment Model (CAM) and the XEMATIX framework for aligning human intent with executable system logic."
+              },
+              {
+                "@type": "WebSite",
+                "@id": "https://bio.johndeacon.co.za/#website",
+                "url": "https://bio.johndeacon.co.za/",
+                "name": "John Deacon - Bio",
+                "publisher": { "@id": "https://bio.johndeacon.co.za/#john-deacon" },
+                "inLanguage": "en"
+              },
+              {
+                "@type": "WebPage",
+                "@id": "https://bio.johndeacon.co.za/#webpage",
+                "url": "https://bio.johndeacon.co.za/",
+                "name": "John Deacon - Personal Digital Thought Leadership",
+                "isPartOf": { "@id": "https://bio.johndeacon.co.za/#website" },
+                "primaryImageOfPage": "https://bio.johndeacon.co.za/static/john-deacon.jpg",
+                "inLanguage": "en"
               }
             ]
           }}
