@@ -660,7 +660,25 @@ export default function Home() {
                 <h3 className="font-semibold">Bachelor Juris - Law</h3>
                 <p className="text-sm text-muted-foreground">Nelson Mandela University • 1990 - 1993</p>
               </div>
-            </CardContent>
+          </CardContent>
+          </Card>
+
+          {/* XEMATIX Cognitive Publishing Promo (fills second column after Education) */}
+          <Card className="p-0 overflow-hidden">
+            <a
+              href="https://www.xematix.com/cognitive-publishing"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                src="/images/xematix-cognitive-publishing.svg"
+                alt="XEMATIX Cognitive Publishing — AI-Driven Content Pipeline"
+                width={1200}
+                height={1200}
+                className="w-full h-auto object-cover"
+                priority
+              />
+            </a>
           </Card>
 
           {/* Recent Insights */}
