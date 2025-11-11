@@ -81,6 +81,17 @@ export const metadata: Metadata = {
     // types or languages could be added here if needed
   },
   category: "technology",
+  icons: {
+    icon: [
+      { url: "/favicon.png", type: "image/png" },
+    ],
+    shortcut: [
+      "/favicon.png",
+    ],
+    apple: [
+      { url: "/favicon.png", type: "image/png" },
+    ],
+  },
 };
 
 export default function RootLayout({

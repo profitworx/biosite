@@ -161,7 +161,7 @@ export default async function InsightsPage() {
             </a>
           </Button>
           <Button variant="outline" className="gap-2" asChild>
-            <a href="https://johndeacon.co.za" target="_blank" rel="noopener noreferrer">
+            <a href="/insights" target="_blank" rel="noopener noreferrer">
               <ExternalLink className="w-4 h-4" />
               Read Articles
             </a>
