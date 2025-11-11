@@ -3,7 +3,7 @@ export default function Head() {
     <>
       <link
         rel="icon"
-        href="/john_deacon_favicon_2025.png"
+        href="/favicon.png"
         type="image/png"
         sizes="any"
       />
