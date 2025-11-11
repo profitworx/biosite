@@ -671,7 +671,7 @@ export default function Home() {
               rel="noopener noreferrer"
             >
               <Image
-                src="/images/xematix-cognitive-publishing.svg"
+                src="/images/xematix-cognitive-publishing.webp"
                 alt="XEMATIX Cognitive Publishing — AI-Driven Content Pipeline"
                 width={1200}
                 height={1200}
