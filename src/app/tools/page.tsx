@@ -131,9 +131,11 @@ export const metadata: Metadata = {
                 </ul>
               </div>
               <div className="pt-4">
-                <Button className="w-full gap-2" disabled>
-                  <FileText className="w-4 h-4" />
-                  Coming Soon
+                <Button className="w-full gap-2" asChild>
+                  <a href="https://cyberkinesis.com" target="_blank" rel="noopener noreferrer">
+                    <FileText className="w-4 h-4" />
+                    Visit CyberKinesis
+                  </a>
                 </Button>
               </div>
             </CardContent>
@@ -184,15 +186,17 @@ export const metadata: Metadata = {
                 </ul>
               </div>
               <div className="pt-4">
-                <Button className="w-full gap-2" disabled>
-                  <Briefcase className="w-4 h-4" />
-                  Coming Soon
+                <Button className="w-full gap-2" asChild>
+                  <a href="https://resumetobrand.com?utm_source=biosite" target="_blank" rel="noopener noreferrer">
+                    <Briefcase className="w-4 h-4" />
+                    Open ResumeToBrand
+                  </a>
                 </Button>
               </div>
             </CardContent>
           </Card>
 
-          {/* XEMATIX Post Automation Pipeline */}
+          {/* XEMATIX Cognitive Publishing Pipeline */}
           <Card className="border-primary/20 hover:border-primary/40 transition-all duration-300 hover:shadow-xl">
             <CardHeader>
               <div className="flex items-start justify-between">
@@ -201,7 +205,7 @@ export const metadata: Metadata = {
                     <Bot className="w-6 h-6 text-primary" />
                   </div>
                   <div>
-                    <CardTitle className="text-xl text-primary">XEMATIX Post Automation Pipeline</CardTitle>
+                    <CardTitle className="text-xl text-primary">XEMATIX Cognitive Publishing Pipeline</CardTitle>
                     <CardDescription className="text-sm text-muted-foreground mt-1">
                       Complete Content Publishing Automation
                     </CardDescription>
@@ -237,9 +241,11 @@ export const metadata: Metadata = {
                 </ul>
               </div>
               <div className="pt-4">
-                <Button className="w-full gap-2" disabled>
-                  <Bot className="w-4 h-4" />
-                  Coming Soon
+                <Button className="w-full gap-2" asChild>
+                  <a href="https://www.xematix.com/cognitive-publishing" target="_blank" rel="noopener noreferrer">
+                    <Bot className="w-4 h-4" />
+                    Visit XEMATIX Cognitive Publishing
+                  </a>
                 </Button>
               </div>
             </CardContent>
