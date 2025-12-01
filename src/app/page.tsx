@@ -19,6 +19,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: "/",
+    siteName: "John Deacon Bio",
     title: "John Deacon | Semantic Systems Architect, XEMATIX & CAM",
     description:
       "Metacognitive software, semantic systems, XEMATIX framework, and the Core Alignment Model (CAM).",
