@@ -26,7 +26,7 @@ type BuildPageMetadataArgs = {
   title: string;
   description: string;
   keywords?: string[];
-  type?: "website" | "article" | "profile" | "collection";
+  type?: "website" | "article" | "profile";
 };
 
 export function buildPageMetadata({
@@ -60,4 +60,3 @@ export function buildPageMetadata({
     keywords: mergedKeywords,
   };
 }
-
