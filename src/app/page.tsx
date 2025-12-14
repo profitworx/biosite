@@ -361,7 +361,7 @@ export default function Home() {
                 
                 <div className="my-8 flex justify-center">
                   <Image
-                    src="/images/john_deacon_presentation.png"
+                    src="/images/john_deacon_presentation.jpg"
                     alt="John Deacon - Cognitive Systems Architect"
                     width={960}
                     height={540}

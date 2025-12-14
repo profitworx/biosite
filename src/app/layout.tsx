@@ -51,7 +51,7 @@ export const metadata: Metadata = {
       "Metacognitive software, semantic systems, XEMATIX framework and the Core Alignment Model (CAM).",
     images: [
       {
-        url: "/images/john_deacon_presentation.png",
+        url: "/images/john_deacon_presentation.jpg",
         width: 1200,
         height: 630,
         alt: "John Deacon",
@@ -66,7 +66,7 @@ export const metadata: Metadata = {
     title: "John Deacon | Semantic Systems Architect",
     description:
       "Metacognitive software, semantic systems, XEMATIX and CAM.",
-    images: ["/images/john_deacon_presentation.png"],
+    images: ["/images/john_deacon_presentation.jpg"],
   },
   alternates: {
     // Do not set a global canonical for all routes; handled per-page
