@@ -361,11 +361,11 @@ export default function Home() {
                 
                 <div className="my-8 flex justify-center">
                   <Image
-                    src="/images/john-deacon-featured.png"
+                    src="/images/john_deacon_presentation.png"
                     alt="John Deacon - Cognitive Systems Architect"
-                    width={900}
-                    height={600}
-                    className="rounded-lg shadow-lg max-w-md w-full h-auto border border-primary/20"
+                    width={960}
+                    height={540}
+                    className="rounded-lg shadow-lg max-w-2xl w-full h-auto border border-primary/20"
                     priority
                   />
                 </div>
