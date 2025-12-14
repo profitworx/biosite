@@ -16,10 +16,11 @@ export function personSchema(overrides: WithOptional<Record<string, unknown>> = 
     '@context': 'https://schema.org',
     '@type': 'Person',
     name: 'John Deacon',
-    jobTitle: 'Digital Thought Leader',
+    jobTitle: 'Semantic Systems Architect and Digital Thought Leader',
     description:
       'Semantic systems architect and digital thought leader focused on metacognitive software and alignment frameworks.',
     url: SITE_URL,
+    image: absoluteUrl('/images/john_deacon_profile_2026.png'),
     sameAs: [
       'https://bio.johndeacon.co.za',
       'https://www.linkedin.com/in/jdeaconx',

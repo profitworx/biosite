@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { JsonLd } from "@/components/seo/json-ld";
 import { personSchema } from "@/lib/schema";
+import { BASE_KEYWORDS } from "@/lib/seo";
 // Prefer explicit site URL via env for canonicals and OG tags
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://bio.johndeacon.co.za";
 
@@ -27,16 +28,7 @@ export const metadata: Metadata = {
     "Metacognitive software, semantic systems, XEMATIX framework and the Core Alignment Model (CAM). Digital thought leadership, intent modeling and alignment.",
   applicationName: "John Deacon Bio",
   authors: [{ name: "John Deacon", url: "https://johndeacon.co.za" }],
-  keywords: [
-    "John Deacon",
-    "Semantic Systems",
-    "XEMATIX",
-    "Core Alignment Model",
-    "CAM",
-    "Metacognition",
-    "Intent Modeling",
-    "Digital Thought Leadership",
-  ],
+  keywords: BASE_KEYWORDS,
   robots: {
     index: true,
     follow: true,
@@ -117,4 +109,3 @@ export default function RootLayout({
     </html>
   );
 }
-
