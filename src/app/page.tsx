@@ -340,7 +340,7 @@ export default function Home() {
         {/* Hero Section */}
         <div className="text-center mb-12">
           <Avatar className="w-32 h-32 mx-auto mb-6 border-4 border-primary/20">
-            <AvatarImage src="/images/john_deacon_profile_2025.png" alt="John Deacon Profile" />
+            <AvatarImage src="/images/john_deacon_profile_2026.png" alt="John Deacon Profile" />
             <AvatarFallback className="text-2xl font-bold bg-primary/10">JD</AvatarFallback>
           </Avatar>
           

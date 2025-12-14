@@ -290,7 +290,7 @@ export default function ProfessionalPage() {
         {/* Professional Header */}
         <div className="text-center mb-12">
           <Avatar className="w-24 h-24 mx-auto mb-4 border-4 border-primary/20">
-            <AvatarImage src="/images/john_deacon_profile_2025.png" alt="John Deacon" />
+            <AvatarImage src="/images/john_deacon_profile_2026.png" alt="John Deacon" />
             <AvatarFallback className="font-bold bg-primary/10">JD</AvatarFallback>
           </Avatar>
           <h1

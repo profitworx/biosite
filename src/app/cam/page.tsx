@@ -376,7 +376,7 @@ export const metadata: Metadata = {
           <Separator className="mb-8" />
           <div className="flex items-center justify-center gap-4 mb-6">
             <Avatar className="w-12 h-12 border-2 border-primary/20">
-              <AvatarImage src="/images/john_deacon_profile_2025.png" alt="John Deacon" />
+              <AvatarImage src="/images/john_deacon_profile_2026.png" alt="John Deacon" />
               <AvatarFallback className="bg-primary/10">JD</AvatarFallback>
             </Avatar>
             <div className="text-left">
