@@ -158,8 +158,8 @@ export default function XematixPage() {
                   </CardHeader>
                   <CardContent className="text-muted-foreground leading-relaxed">
                     <p>
-                      ALOs are structured semantic containers that hold policy, brand logic, constraints, and reasoning style as a living
-                      object—not a static document.
+                      ALOs are structured semantic containers that hold policy, control logic (including brand/policy logic), constraints,
+                      and reasoning style as a living object—not a static document.
                     </p>
                     <p className="mt-4">
                       Because ALOs are linked to CAM, the system can enforce alignment at the data layer, not just in prompts.
