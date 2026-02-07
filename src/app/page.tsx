@@ -6,7 +6,6 @@ import { Separator } from "@/components/ui/separator";
 import { Linkedin, Mail, ExternalLink, MapPin, Briefcase } from "lucide-react";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
 import { JsonLd } from "@/components/seo/json-ld";
-import { personSchema, faqSchema, absoluteUrl } from "@/lib/schema";
 import { buildPageMetadata } from "@/lib/seo";
 import Image from "next/image";
 import Link from "next/link";
@@ -304,10 +303,10 @@ export default function Home() {
               </Link>
             </Button>
             <Button variant="outline" size="lg" className="gap-2" asChild>
-              <a href="/insights/" target="_blank" rel="noopener noreferrer">
+              <Link href="/insights/" target="_blank" rel="noopener noreferrer">
                 <ExternalLink className="w-4 h-4" />
                 Read Articles
-              </a>
+              </Link>
             </Button>
           </div>
         </div>
@@ -386,9 +385,9 @@ export default function Home() {
                       Cognitive interface architecture that bridges natural language, structured logic, and contextual reasoning.
                     </p>
                     <Button variant="outline" className="w-full" asChild>
-                      <a href="/xematix">
+                      <Link href="/xematix">
                         Explore XEMATIX &rarr;
-                      </a>
+                      </Link>
                     </Button>
                   </CardContent>
                 </Card>
@@ -402,9 +401,9 @@ export default function Home() {
                       Core Alignment Model - a metacognitive framework for structuring Mission, Vision, Strategy, and Tactics.
                     </p>
                     <Button variant="outline" className="w-full" asChild>
-                      <a href="/cam">
+                      <Link href="/cam">
                         Learn CAM &rarr;
-                      </a>
+                      </Link>
                     </Button>
                   </CardContent>
                 </Card>
@@ -418,9 +417,9 @@ export default function Home() {
                       Digital Thought Leadership Model for creating meaningful influence through aligned systems.
                     </p>
                     <Button variant="outline" className="w-full" asChild>
-                      <a href="/dtlm">
+                      <Link href="/dtlm">
                         Discover DTLM &rarr;
-                      </a>
+                      </Link>
                     </Button>
                   </CardContent>
                 </Card>
@@ -433,10 +432,8 @@ export default function Home() {
                     <p className="text-sm text-muted-foreground mb-4">
                       From analogue systems to digital architectures - the path to purposeful transformation.
                     </p>
-                    <Button variant="ghost-outline" className="w-full" asChild>
-                      <a href="/#">
-                        Coming Soon &rarr;
-                      </a>
+                    <Button variant="outline" className="w-full" disabled>
+                      Coming Soon &rarr;
                     </Button>
                   </CardContent>
                 </Card>
@@ -450,9 +447,9 @@ export default function Home() {
                       Ongoing thoughts, tools, and frameworks for structured thinking and semantic design.
                     </p>
                     <Button variant="outline" className="w-full" asChild>
-                      <a href="/insights">
+                      <Link href="/insights">
                         Latest Insights &rarr;
-                      </a>
+                      </Link>
                     </Button>
                   </CardContent>
                 </Card>
@@ -466,9 +463,9 @@ export default function Home() {
                       Schema-driven tools, automation scripts, and microsite templates for creators and professionals.
                     </p>
                     <Button variant="outline" className="w-full" asChild>
-                      <a href="/tools">
+                      <Link href="/tools">
                         View Tools &rarr;
-                      </a>
+                      </Link>
                     </Button>
                   </CardContent>
                 </Card>
@@ -629,9 +626,9 @@ export default function Home() {
                     Not just another AI feature set, but a foundation for intent-aligned computing.
                   </p>
                   <Button variant="link" className="p-0 h-auto text-xs" asChild>
-                    <a href="/xematix">
+                    <Link href="/xematix">
                       Learn More &rarr;
-                    </a>
+                    </Link>
                   </Button>
                 </div>
                 <div className="space-y-2">
@@ -641,9 +638,9 @@ export default function Home() {
                     to structure human intent for semantic system alignment.
                   </p>
                   <Button variant="link" className="p-0 h-auto text-xs" asChild>
-                    <a href="/cam">
+                    <Link href="/cam">
                       Explore Framework &rarr;
-                    </a>
+                    </Link>
                   </Button>
                 </div>
                 <div className="space-y-2">
@@ -653,9 +650,9 @@ export default function Home() {
                     to create monetizable infrastructure and aligned workflows.
                   </p>
                   <Button variant="link" className="p-0 h-auto text-xs" asChild>
-                    <a href="/insights">
+                    <Link href="/insights">
                       Read Articles &rarr;
-                    </a>
+                    </Link>
                   </Button>
                 </div>
                 <div className="space-y-2">
@@ -665,9 +662,9 @@ export default function Home() {
                     for creators who value clarity and control.
                   </p>
                   <Button variant="link" className="p-0 h-auto text-xs" asChild>
-                    <a href="/tools">
+                    <Link href="/tools">
                       View Tools &rarr;
-                    </a>
+                    </Link>
                   </Button>
                 </div>
               </div>
