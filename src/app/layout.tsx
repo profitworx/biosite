@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { JsonLd } from "@/components/seo/json-ld";
 import { personSchema } from "@/lib/schema";
+import { BASE_KEYWORDS } from "@/lib/seo";
 // Prefer explicit site URL via env for canonicals and OG tags
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://bio.johndeacon.co.za";
 
@@ -27,16 +28,7 @@ export const metadata: Metadata = {
     "Metacognitive software, semantic systems, XEMATIX framework and the Core Alignment Model (CAM). Digital thought leadership, intent modeling and alignment.",
   applicationName: "John Deacon Bio",
   authors: [{ name: "John Deacon", url: "https://johndeacon.co.za" }],
-  keywords: [
-    "John Deacon",
-    "Semantic Systems",
-    "XEMATIX",
-    "Core Alignment Model",
-    "CAM",
-    "Metacognition",
-    "Intent Modeling",
-    "Digital Thought Leadership",
-  ],
+  keywords: BASE_KEYWORDS,
   robots: {
     index: true,
     follow: true,
@@ -53,13 +45,13 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: "/",
-    siteName: "John Deacon",
+    siteName: "John Deacon Bio",
     title: "John Deacon | Semantic Systems Architect, XEMATIX and CAM",
     description:
       "Metacognitive software, semantic systems, XEMATIX framework and the Core Alignment Model (CAM).",
     images: [
       {
-        url: "/images/john-deacon-featured.png",
+        url: "/images/john_deacon_presentation.jpg",
         width: 1200,
         height: 630,
         alt: "John Deacon",
@@ -74,13 +66,24 @@ export const metadata: Metadata = {
     title: "John Deacon | Semantic Systems Architect",
     description:
       "Metacognitive software, semantic systems, XEMATIX and CAM.",
-    images: ["/images/john-deacon-featured.png"],
+    images: ["/images/john_deacon_presentation.jpg"],
   },
   alternates: {
     // Do not set a global canonical for all routes; handled per-page
     // types or languages could be added here if needed
   },
   category: "technology",
+  icons: {
+    icon: [
+      { url: "/favicon.png", type: "image/png" },
+    ],
+    shortcut: [
+      "/favicon.png",
+    ],
+    apple: [
+      { url: "/favicon.png", type: "image/png" },
+    ],
+  },
 };
 
 export default function RootLayout({
@@ -106,4 +109,3 @@ export default function RootLayout({
     </html>
   );
 }
-

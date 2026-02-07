@@ -134,7 +134,7 @@ export default async function InsightsPage() {
       {/* Profile Header */}
       <div className="text-center mb-10">
         <Avatar className="w-24 h-24 mx-auto mb-4 border-4 border-primary/20">
-          <AvatarImage src="/images/profile-avatar.jpg" alt="John Deacon Profile" />
+          <AvatarImage src="/images/john_deacon_profile_2026.png" alt="John Deacon Profile" />
           <AvatarFallback className="font-bold bg-primary/10">JD</AvatarFallback>
         </Avatar>
         <h1 className="text-3xl md:text-4xl font-bold mb-3 bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent" style={{lineHeight: '1.3', paddingBottom: '0.1em'}}>
@@ -161,7 +161,7 @@ export default async function InsightsPage() {
             </a>
           </Button>
           <Button variant="outline" className="gap-2" asChild>
-            <a href="https://johndeacon.co.za" target="_blank" rel="noopener noreferrer">
+            <a href="/insights" target="_blank" rel="noopener noreferrer">
               <ExternalLink className="w-4 h-4" />
               Read Articles
             </a>

@@ -6,49 +6,18 @@ import { Separator } from "@/components/ui/separator";
 import { Linkedin, Mail, ExternalLink, MapPin, Briefcase } from "lucide-react";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
 import { JsonLd } from "@/components/seo/json-ld";
+import { personSchema, faqSchema, absoluteUrl } from "@/lib/schema";
+import { buildPageMetadata } from "@/lib/seo";
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
+  path: "/",
   title: "John Deacon | Semantic Systems Architect, XEMATIX & CAM",
   description:
     "Semantic systems architect focused on metacognitive software, the XEMATIX framework, and the Core Alignment Model (CAM) for aligning human intent with executable system logic.",
-  alternates: { canonical: "/" },
-  robots: { index: true, follow: true },
-  openGraph: {
-    type: "website",
-    url: "/",
-    title: "John Deacon | Semantic Systems Architect, XEMATIX & CAM",
-    description:
-      "Metacognitive software, semantic systems, XEMATIX framework, and the Core Alignment Model (CAM).",
-    images: [
-      {
-        url: "/images/john-deacon-featured.png",
-        width: 1200,
-        height: 630,
-        alt: "John Deacon",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "John Deacon | Semantic Systems Architect",
-    description:
-      "Metacognitive software, semantic systems, XEMATIX framework, and CAM.",
-    images: ["/images/john-deacon-featured.png"],
-  },
-  keywords: [
-    "John Deacon",
-    "Semantic Systems",
-    "XEMATIX",
-    "Core Alignment Model",
-    "CAM",
-    "Metacognition",
-    "Intent Modeling",
-    "Digital Thought Leadership",
-  ],
-};
+});
 
 export default function Home() {
   return (
@@ -68,7 +37,7 @@ export default function Home() {
                   "John Deacon — Framework Architect"
                 ],
                 "url": "https://bio.johndeacon.co.za/",
-                "image": "https://bio.johndeacon.co.za/static/john-deacon.jpg",
+                "image": "https://bio.johndeacon.co.za/images/john_deacon_profile_2026.png",
                 "nationality": "South Africa",
                 "address": {
                   "@type": "PostalAddress",
@@ -175,7 +144,7 @@ export default function Home() {
                 "url": "https://bio.johndeacon.co.za/",
                 "name": "John Deacon — Personal Digital Thought Leadership",
                 "isPartOf": { "@id": "https://bio.johndeacon.co.za/#website" },
-                "primaryImageOfPage": "https://bio.johndeacon.co.za/static/john-deacon.jpg",
+                "primaryImageOfPage": "https://bio.johndeacon.co.za/images/john_deacon_profile_2026.png",
                 "about": { "@id": "https://bio.johndeacon.co.za/#john-deacon" },
                 "speakable": {
                   "@type": "SpeakableSpecification",
@@ -199,7 +168,9 @@ export default function Home() {
                   "XEMATIX",
                   "Digital Thought Leadership",
                   "Semantic Resonance",
-                  "Process Control"
+                  "Process Control",
+                  "AI SEO",
+                  "Digital Business Strategy"
                 ]
               },
               {
@@ -292,46 +263,6 @@ export default function Home() {
             ]
           }}
         />
-        <JsonLd
-          id="schema-home-clean"
-          data={{
-            "@context": "https://schema.org",
-            "@graph": [
-              {
-                "@type": "Person",
-                "@id": "https://bio.johndeacon.co.za/#john-deacon",
-                "name": "John Deacon",
-                "alternateName": [
-                  "John Deacon - Metacognition Coach",
-                  "John Deacon - Framework Architect"
-                ],
-                "url": "https://bio.johndeacon.co.za/",
-                "image": "https://bio.johndeacon.co.za/static/john-deacon.jpg",
-                "nationality": "South Africa",
-                "address": { "@type": "PostalAddress", "addressCountry": "ZA" },
-                "jobTitle": "Metacognition Coach and Framework Architect",
-                "description": "John Deacon is a South Africa-based researcher and digital practitioner focused on cognitive systems, AI, and metacognitive software infrastructure. Creator of the Core Alignment Model (CAM) and the XEMATIX framework for aligning human intent with executable system logic."
-              },
-              {
-                "@type": "WebSite",
-                "@id": "https://bio.johndeacon.co.za/#website",
-                "url": "https://bio.johndeacon.co.za/",
-                "name": "John Deacon - Bio",
-                "publisher": { "@id": "https://bio.johndeacon.co.za/#john-deacon" },
-                "inLanguage": "en"
-              },
-              {
-                "@type": "WebPage",
-                "@id": "https://bio.johndeacon.co.za/#webpage",
-                "url": "https://bio.johndeacon.co.za/",
-                "name": "John Deacon - Personal Digital Thought Leadership",
-                "isPartOf": { "@id": "https://bio.johndeacon.co.za/#website" },
-                "primaryImageOfPage": "https://bio.johndeacon.co.za/static/john-deacon.jpg",
-                "inLanguage": "en"
-              }
-            ]
-          }}
-        />
         {/* Theme Toggle */}
         <div className="flex justify-end mb-4">
           <ThemeToggle />
@@ -339,7 +270,7 @@ export default function Home() {
         {/* Hero Section */}
         <div className="text-center mb-12">
           <Avatar className="w-32 h-32 mx-auto mb-6 border-4 border-primary/20">
-            <AvatarImage src="/images/profile-avatar.jpg" alt="John Deacon Profile" />
+            <AvatarImage src="/images/john_deacon_profile_2026.png" alt="John Deacon Profile" />
             <AvatarFallback className="text-2xl font-bold bg-primary/10">JD</AvatarFallback>
           </Avatar>
           
@@ -373,7 +304,7 @@ export default function Home() {
               </Link>
             </Button>
             <Button variant="outline" size="lg" className="gap-2" asChild>
-              <a href="https://johndeacon.co.za" target="_blank" rel="noopener noreferrer">
+              <a href="/insights/" target="_blank" rel="noopener noreferrer">
                 <ExternalLink className="w-4 h-4" />
                 Read Articles
               </a>
@@ -430,11 +361,11 @@ export default function Home() {
                 
                 <div className="my-8 flex justify-center">
                   <Image
-                    src="/images/john-deacon-featured.png"
+                    src="/images/john_deacon_presentation.jpg"
                     alt="John Deacon - Cognitive Systems Architect"
-                    width={900}
-                    height={600}
-                    className="rounded-lg shadow-lg max-w-md w-full h-auto border border-primary/20"
+                    width={960}
+                    height={540}
+                    className="rounded-lg shadow-lg max-w-2xl w-full h-auto border border-primary/20"
                     priority
                   />
                 </div>
@@ -660,7 +591,25 @@ export default function Home() {
                 <h3 className="font-semibold">Bachelor Juris - Law</h3>
                 <p className="text-sm text-muted-foreground">Nelson Mandela University • 1990 - 1993</p>
               </div>
-            </CardContent>
+          </CardContent>
+          </Card>
+
+          {/* XEMATIX Cognitive Publishing Promo (fills second column after Education) */}
+          <Card className="p-0 overflow-hidden">
+            <a
+              href="https://www.xematix.com/cognitive-publishing"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                src="/images/xematix-cognitive-publishing.webp"
+                alt="XEMATIX Cognitive Publishing — AI-Driven Content Pipeline"
+                width={1200}
+                height={1200}
+                className="w-full h-auto object-cover"
+                priority
+              />
+            </a>
           </Card>
 
           {/* Recent Insights */}
