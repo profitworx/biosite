@@ -496,15 +496,15 @@ export default function Home() {
 
                 <Card className="hover:shadow-lg transition-shadow border-primary/10">
                   <CardHeader className="pb-2">
-                    <CardTitle className="text-lg">The Journey</CardTitle>
+                    <CardTitle className="text-lg">Digital Journey</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p className="text-sm text-muted-foreground mb-4">
                       From analogue systems to digital architectures - the path to purposeful transformation.
                     </p>
-                    <Button variant="outline" className="w-full" asChild>
-                      <a href="/about#journey">
-                        Read Story &rarr;
+                    <Button variant="ghost-outline" className="w-full" asChild>
+                      <a href="/#">
+                        Coming Soon &rarr;
                       </a>
                     </Button>
                   </CardContent>
