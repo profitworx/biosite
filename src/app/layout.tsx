@@ -1,32 +1,15 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
-import { JsonLd } from "@/components/seo/json-ld";
-import { personSchema } from "@/lib/schema";
 import { BASE_KEYWORDS } from "@/lib/seo";
-// Prefer explicit site URL via env for canonicals and OG tags
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://bio.johndeacon.co.za";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import { DEFAULT_OG_IMAGE, PERSON_DESCRIPTION, SITE_NAME, SITE_URL } from "@/lib/site";
+import { SiteHeader } from "@/components/site-header";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: {
-    default: "John Deacon | Semantic Systems Architect, XEMATIX and CAM",
-    template: "%s | John Deacon",
-  },
-  description:
-    "Metacognitive software, semantic systems, XEMATIX framework and the Core Alignment Model (CAM). Digital thought leadership, intent modeling and alignment.",
-  applicationName: "John Deacon Bio",
+  title: "John Deacon | Semantic Systems Architect, XEMATIX and CAM",
+  description: PERSON_DESCRIPTION,
+  applicationName: SITE_NAME,
   authors: [{ name: "John Deacon", url: "https://johndeacon.co.za" }],
   keywords: BASE_KEYWORDS,
   robots: {
@@ -45,16 +28,15 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: "/",
-    siteName: "John Deacon Bio",
+    siteName: SITE_NAME,
     title: "John Deacon | Semantic Systems Architect, XEMATIX and CAM",
-    description:
-      "Metacognitive software, semantic systems, XEMATIX framework and the Core Alignment Model (CAM).",
+    description: PERSON_DESCRIPTION,
     images: [
       {
-        url: "/images/john_deacon_presentation.jpg",
-        width: 1200,
-        height: 630,
-        alt: "John Deacon",
+        url: DEFAULT_OG_IMAGE.path,
+        width: DEFAULT_OG_IMAGE.width,
+        height: DEFAULT_OG_IMAGE.height,
+        alt: DEFAULT_OG_IMAGE.alt,
       },
     ],
     locale: "en_ZA",
@@ -64,13 +46,13 @@ export const metadata: Metadata = {
     site: "@jdeaconx",
     creator: "@jdeaconx",
     title: "John Deacon | Semantic Systems Architect",
-    description:
-      "Metacognitive software, semantic systems, XEMATIX and CAM.",
-    images: ["/images/john_deacon_presentation.jpg"],
+    description: PERSON_DESCRIPTION,
+    images: [DEFAULT_OG_IMAGE.path],
   },
   alternates: {
-    // Do not set a global canonical for all routes; handled per-page
-    // types or languages could be added here if needed
+    types: {
+      "application/ld+json": `${SITE_URL}/`,
+    },
   },
   category: "technology",
   icons: {
@@ -93,16 +75,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <JsonLd data={personSchema()} id="schema-person" />
+      <body className="antialiased">
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
           enableSystem
           disableTransitionOnChange
         >
+          <SiteHeader />
           {children}
         </ThemeProvider>
       </body>

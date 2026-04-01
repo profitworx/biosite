@@ -5,48 +5,42 @@ import { Separator } from "@/components/ui/separator";
 import { Badge } from "@/components/ui/badge";
 import { ArrowLeft, Target, Eye, Map, Zap, Brain } from "lucide-react";
 import Link from "next/link";
-import { ThemeToggle } from "@/components/ui/theme-toggle";
+import { BreadcrumbTrail } from "@/components/seo/breadcrumb-trail";
 import { JsonLd } from "@/components/seo/json-ld";
-import { creativeWorkSchema, faqSchema, absoluteUrl } from "@/lib/schema";
+import { RelatedHubs } from "@/components/seo/related-hubs";
+import { buildRouteMetadata } from "@/lib/seo";
+import { creativeWorkSchema, pageSchema, routeBreadcrumbSchema, absoluteUrl } from "@/lib/schema";
+import { getPageId } from "@/lib/site";
 
 import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Core Alignment Model (CAM): Align Purpose to Execution | John Deacon",
-  description: "Metacognitive scaffold for mission, vision, strategy and tactics with continuous awareness to align intent to execution.",
-  alternates: { canonical: absoluteUrl('/cam') },
-};export default function CAMPage() {
+export const metadata: Metadata = buildRouteMetadata("cam");
+
+const camWorkId = absoluteUrl("/cam#creative-work");
+
+export default function CAMPage() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <div className="container mx-auto px-4 py-8 max-w-4xl">
         <JsonLd
           id="schema-cam"
           data={[
-            creativeWorkSchema({
-              name: 'Core Alignment Model (CAM)',
-              description:
-                'A metacognitive scaffold that aligns intent to execution through Mission, Vision, Strategy, Tactics, and Conscious Awareness.',
-              keywords: ['CAM', 'Core Alignment Model', 'Metacognitive Framework'],
-              url: absoluteUrl('/cam'),
+            pageSchema({
+              routeKey: "cam",
+              mainEntityId: camWorkId,
             }),
-            faqSchema([
-              {
-                question: 'What is CAM?',
-                answer:
-                  'CAM is a framework for aligning purpose with execution using a structured mental model and continuous awareness.',
-              },
-              {
-                question: 'How does CAM help?',
-                answer:
-                  'It ensures clarity and consistency by anchoring decisions and actions to a shared structure of intent.',
-              },
-            ]),
+            routeBreadcrumbSchema("cam"),
+            creativeWorkSchema({
+              id: camWorkId,
+              name: "Core Alignment Model (CAM)",
+              description:
+                "A metacognitive scaffold that aligns intent to execution through Mission, Vision, Strategy, Tactics, and Conscious Awareness.",
+              keywords: ["CAM", "Core Alignment Model", "Metacognitive Framework"],
+              url: absoluteUrl("/cam"),
+              isPartOfId: getPageId("cam"),
+            }),
           ]}
         />
-        {/* Theme Toggle */}
-        <div className="flex justify-end mb-4">
-          <ThemeToggle />
-        </div>
         {/* Back to Home */}
         <div className="mb-8">
           <Button variant="ghost" asChild className="gap-2">
@@ -56,6 +50,8 @@ export const metadata: Metadata = {
             </Link>
           </Button>
         </div>
+
+        <BreadcrumbTrail routeKey="cam" />
 
         {/* CAM Header */}
         <div className="text-center mb-12">
@@ -390,6 +386,8 @@ export const metadata: Metadata = {
             </Link>
           </Button>
         </div>
+
+        <RelatedHubs routeKey="cam" />
       </div>
     </div>
   );

@@ -1,25 +1,13 @@
-const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || "https://bio.johndeacon.co.za").replace(/\/$/, "");
+import { SITE_URL, getPrimaryNavigationRoutes } from "@/lib/site";
 
-const routes: Array<{
-  path: string;
-  changefreq: string;
-  priority: number;
-}> = [
-  { path: "/", changefreq: "weekly", priority: 1.0 },
-  { path: "/cam", changefreq: "weekly", priority: 0.7 },
-  { path: "/dtlm", changefreq: "weekly", priority: 0.7 },
-  { path: "/insights", changefreq: "weekly", priority: 0.7 },
-  { path: "/professional", changefreq: "weekly", priority: 0.7 },
-  { path: "/tools", changefreq: "weekly", priority: 0.7 },
-  { path: "/xematix", changefreq: "weekly", priority: 0.7 },
-];
+const routes = getPrimaryNavigationRoutes();
 
 function generateSitemapXml() {
-  const lastmod = new Date().toISOString();
   const urls = routes
-    .map(({ path, changefreq, priority }) => {
+    .map(({ path, changeFrequency, priority, lastModified }) => {
       const url = `${SITE_URL}${path}`;
-      return `    <url>\n      <loc>${url}</loc>\n      <lastmod>${lastmod}</lastmod>\n      <changefreq>${changefreq}</changefreq>\n      <priority>${priority.toFixed(1)}</priority>\n    </url>`;
+      const lastmod = new Date(lastModified).toISOString();
+      return `    <url>\n      <loc>${url}</loc>\n      <lastmod>${lastmod}</lastmod>\n      <changefreq>${changeFrequency}</changefreq>\n      <priority>${priority.toFixed(1)}</priority>\n    </url>`;
     })
     .join("\n");
 

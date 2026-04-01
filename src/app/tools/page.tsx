@@ -5,17 +5,17 @@ import { Separator } from "@/components/ui/separator";
 import { Badge } from "@/components/ui/badge";
 import { ArrowLeft, Wrench, FileText, Bot, Zap, Globe, Briefcase } from "lucide-react";
 import Link from "next/link";
-import { ThemeToggle } from "@/components/ui/theme-toggle";
+import { BreadcrumbTrail } from "@/components/seo/breadcrumb-trail";
 import { JsonLd } from "@/components/seo/json-ld";
-import { collectionPageSchema, faqSchema, absoluteUrl } from "@/lib/schema";
+import { RelatedHubs } from "@/components/seo/related-hubs";
+import { buildRouteMetadata } from "@/lib/seo";
+import { collectionPageSchema, routeBreadcrumbSchema } from "@/lib/schema";
 
 import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Digital Tools | Automation and Semantic Design | John Deacon",
-  description: "Schema-driven tools, AI automation and microsite templates for creators using semantic, intent-aligned design.",
-  alternates: { canonical: absoluteUrl('/tools') },
-};export default function ToolsPage() {
+export const metadata: Metadata = buildRouteMetadata("tools");
+
+export default function ToolsPage() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <div className="container mx-auto px-4 py-8 max-w-4xl">
@@ -23,30 +23,15 @@ export const metadata: Metadata = {
           id="schema-tools"
           data={[
             collectionPageSchema({
-              name: 'Digital Tools - John Deacon',
+              routeKey: "tools",
+              name: "Digital Tools | John Deacon",
               description:
-                'Schema-driven tools, automation scripts, and microsite templates aligned with metacognitive software principles.',
-              keywords: ['Digital Tools', 'Automation', 'Semantic Design'],
-              url: absoluteUrl('/tools'),
+                "Schema-driven tools, automation scripts, and microsite templates aligned with metacognitive software principles.",
+              keywords: ["Digital Tools", "Automation", "Semantic Design"],
             }),
-            faqSchema([
-              {
-                question: 'What kind of tools are these?',
-                answer:
-                  'Utilities and templates that embody structured thinking, semantic design, and intelligent automation.',
-              },
-              {
-                question: 'Are the tools production-ready?',
-                answer:
-                  'Some are live, others are in development; each card indicates availability and purpose.',
-              },
-            ]),
+            routeBreadcrumbSchema("tools"),
           ]}
         />
-        {/* Theme Toggle */}
-        <div className="flex justify-end mb-4">
-          <ThemeToggle />
-        </div>
         {/* Back to Home */}
         <div className="mb-8">
           <Button variant="ghost" asChild className="gap-2">
@@ -56,6 +41,8 @@ export const metadata: Metadata = {
             </Link>
           </Button>
         </div>
+
+        <BreadcrumbTrail routeKey="tools" />
 
         {/* Digital Tools Header */}
         <div className="text-center mb-12">
@@ -394,6 +381,8 @@ export const metadata: Metadata = {
             </Link>
           </Button>
         </div>
+
+        <RelatedHubs routeKey="tools" />
       </div>
     </div>
   );

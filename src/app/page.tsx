@@ -1,22 +1,17 @@
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+﻿import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { RelatedHubs } from "@/components/seo/related-hubs";
 import { Separator } from "@/components/ui/separator";
 import { Linkedin, Mail, ExternalLink, MapPin, Briefcase } from "lucide-react";
-import { ThemeToggle } from "@/components/ui/theme-toggle";
 import { JsonLd } from "@/components/seo/json-ld";
-import { buildPageMetadata } from "@/lib/seo";
+import { buildRouteMetadata } from "@/lib/seo";
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 
-export const metadata: Metadata = buildPageMetadata({
-  path: "/",
-  title: "John Deacon | Semantic Systems Architect, XEMATIX & CAM",
-  description:
-    "Semantic systems architect focused on metacognitive software, the XEMATIX framework, and the Core Alignment Model (CAM) for aligning human intent with executable system logic.",
-});
+export const metadata: Metadata = buildRouteMetadata("home");
 
 export default function Home() {
   return (
@@ -32,8 +27,8 @@ export default function Home() {
                 "@id": "https://bio.johndeacon.co.za/#john-deacon",
                 "name": "John Deacon",
                 "alternateName": [
-                  "John Deacon — Metacognition Coach",
-                  "John Deacon — Framework Architect"
+                  "John Deacon â€” Metacognition Coach",
+                  "John Deacon â€” Framework Architect"
                 ],
                 "url": "https://bio.johndeacon.co.za/",
                 "image": "https://bio.johndeacon.co.za/images/john_deacon_profile_2026.png",
@@ -43,7 +38,7 @@ export default function Home() {
                   "addressCountry": "ZA"
                 },
                 "jobTitle": "Metacognition Coach and Framework Architect",
-                "description": "John Deacon is a South Africa–based researcher and digital practitioner focused on cognitive systems, AI, and metacognitive software infrastructure. Creator of the Core Alignment Model (CAM) and the XEMATIX framework for aligning human intent with executable system logic.",
+                "description": "John Deacon is a South Africaâ€“based researcher and digital practitioner focused on cognitive systems, AI, and metacognitive software infrastructure. Creator of the Core Alignment Model (CAM) and the XEMATIX framework for aligning human intent with executable system logic.",
                 "worksFor": {
                   "@type": "Organization",
                   "name": "ProfitWorx",
@@ -119,7 +114,7 @@ export default function Home() {
                 "@type": "WebSite",
                 "@id": "https://bio.johndeacon.co.za/#website",
                 "url": "https://bio.johndeacon.co.za/",
-                "name": "John Deacon — Bio",
+                "name": "John Deacon â€” Bio",
                 "publisher": { "@id": "https://bio.johndeacon.co.za/#john-deacon" },
                 "inLanguage": "en",
                 "about": { "@id": "https://bio.johndeacon.co.za/#john-deacon" },
@@ -141,7 +136,7 @@ export default function Home() {
                 "@type": "WebPage",
                 "@id": "https://bio.johndeacon.co.za/#webpage",
                 "url": "https://bio.johndeacon.co.za/",
-                "name": "John Deacon — Personal Digital Thought Leadership",
+                "name": "John Deacon â€” Personal Digital Thought Leadership",
                 "isPartOf": { "@id": "https://bio.johndeacon.co.za/#website" },
                 "primaryImageOfPage": "https://bio.johndeacon.co.za/images/john_deacon_profile_2026.png",
                 "about": { "@id": "https://bio.johndeacon.co.za/#john-deacon" },
@@ -182,7 +177,7 @@ export default function Home() {
                     "name": "Who is John Deacon?",
                     "acceptedAnswer": {
                       "@type": "Answer",
-                      "text": "John Deacon is a South Africa–based metacognition coach and framework architect. He created the Core Alignment Model (CAM) and the XEMATIX framework to align human intent with executable system logic, helping professionals and teams turn nuanced thinking into practical outputs."
+                      "text": "John Deacon is a South Africaâ€“based metacognition coach and framework architect. He created the Core Alignment Model (CAM) and the XEMATIX framework to align human intent with executable system logic, helping professionals and teams turn nuanced thinking into practical outputs."
                     }
                   },
                   {
@@ -190,7 +185,7 @@ export default function Home() {
                     "name": "What is the Core Alignment Model (CAM)?",
                     "acceptedAnswer": {
                       "@type": "Answer",
-                      "text": "CAM is a structured reasoning framework – Mission, Vision, Strategy, Tactics, with Conscious Awareness as a governing layer – used to map intent to action. It serves as a cognitive scaffold for decision-making, communication, and content creation."
+                      "text": "CAM is a structured reasoning framework â€“ Mission, Vision, Strategy, Tactics, with Conscious Awareness as a governing layer â€“ used to map intent to action. It serves as a cognitive scaffold for decision-making, communication, and content creation."
                     }
                   },
                   {
@@ -246,7 +241,7 @@ export default function Home() {
                     "name": "What audiences benefit most from John's work?",
                     "acceptedAnswer": {
                       "@type": "Answer",
-                      "text": "Corporate professionals and thought leaders seeking to turn nuanced thinking into repeatable systems – e.g., brand strategy, AI-assisted content pipelines, and decision frameworks grounded in CAM."
+                      "text": "Corporate professionals and thought leaders seeking to turn nuanced thinking into repeatable systems â€“ e.g., brand strategy, AI-assisted content pipelines, and decision frameworks grounded in CAM."
                     }
                   },
                   {
@@ -262,10 +257,6 @@ export default function Home() {
             ]
           }}
         />
-        {/* Theme Toggle */}
-        <div className="flex justify-end mb-4">
-          <ThemeToggle />
-        </div>
         {/* Hero Section */}
         <div className="text-center mb-12">
           <Avatar className="w-32 h-32 mx-auto mb-6 border-4 border-primary/20">
@@ -353,9 +344,9 @@ export default function Home() {
                   <strong>Visibility is no longer the metric that matters. Alignment is the new foundation of intelligence.</strong>
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  Digital Thought Leadership is evolving—from content and visibility toward semantic structure and cognitive clarity. 
+                  Digital Thought Leadership is evolvingâ€”from content and visibility toward semantic structure and cognitive clarity. 
                   My work sits at the intersection of interface logic and intentional system design, helping thinkers, technologists, 
-                  and builders structure systems that scale meaning—not just output.
+                  and builders structure systems that scale meaningâ€”not just output.
                 </p>
                 
                 <div className="my-8 flex justify-center">
@@ -371,7 +362,7 @@ export default function Home() {
                 
                 <p className="text-muted-foreground leading-relaxed">
                   If you&apos;re driven by ideas that deserve semantic structure and intelligent execution, 
-                  you&apos;re already thinking like a cognitive architect. I help you build it—strategically, structurally, and systemically.
+                  you&apos;re already thinking like a cognitive architect. I help you build itâ€”strategically, structurally, and systemically.
                 </p>
               </div>
               
@@ -483,7 +474,7 @@ export default function Home() {
             </CardHeader>
             <CardContent className="space-y-6">
               <div>
-                <h3 className="font-semibold">Founder • XEMATIX</h3>
+                <h3 className="font-semibold">Founder â€¢ XEMATIX</h3>
                 <p className="text-sm text-muted-foreground">January 2025 - Present</p>
                 <p className="text-sm mt-2 text-muted-foreground">
                   Building semantic control systems that interpret human intent through structured language and contextual logic. 
@@ -492,7 +483,7 @@ export default function Home() {
               </div>
               <Separator />
               <div>
-                <h3 className="font-semibold">Founder &amp; Strategist • ProfitWorx</h3>
+                <h3 className="font-semibold">Founder &amp; Strategist â€¢ ProfitWorx</h3>
                 <p className="text-sm text-muted-foreground">May 2008 - Present (17+ years)</p>
                 <p className="text-sm mt-2 text-muted-foreground">
                   Strategic consulting in semantic SEO, content engineering, and digital systems. 
@@ -501,7 +492,7 @@ export default function Home() {
               </div>
               <Separator />
               <div>
-                <h3 className="font-semibold">Head of Product &amp; Business Development • PageMatix</h3>
+                <h3 className="font-semibold">Head of Product &amp; Business Development â€¢ PageMatix</h3>
                 <p className="text-sm text-muted-foreground">March 2018 - Present (7+ years)</p>
                 <p className="text-sm mt-2 text-muted-foreground">
                   Microsite platform empowering professionals to launch personal brands using CAM framework principles.
@@ -509,7 +500,7 @@ export default function Home() {
               </div>
               <Separator />
               <div>
-                <h3 className="font-semibold">Global Account Executive • Bentley Systems</h3>
+                <h3 className="font-semibold">Global Account Executive â€¢ Bentley Systems</h3>
                 <p className="text-sm text-muted-foreground">November 2004 - May 2008 (3.5 years)</p>
                 <p className="text-sm mt-2 text-muted-foreground">
                   Managed global accounts for oil and gas industry including Anglo American, De Beers, Rio Tinto. 
@@ -576,17 +567,17 @@ export default function Home() {
             <CardContent className="space-y-6">
               <div>
                 <h3 className="font-semibold">Bachelor of Arts - Business Administration &amp; Project Management</h3>
-                <p className="text-sm text-muted-foreground">The University of Western Australia • 2005 - 2006</p>
+                <p className="text-sm text-muted-foreground">The University of Western Australia â€¢ 2005 - 2006</p>
               </div>
               <Separator />
               <div>
                 <h3 className="font-semibold">Bachelor of Arts - Law &amp; Politics</h3>
-                <p className="text-sm text-muted-foreground">University of South Africa • 2002 - 2005</p>
+                <p className="text-sm text-muted-foreground">University of South Africa â€¢ 2002 - 2005</p>
               </div>
               <Separator />
               <div>
                 <h3 className="font-semibold">Bachelor Juris - Law</h3>
-                <p className="text-sm text-muted-foreground">Nelson Mandela University • 1990 - 1993</p>
+                <p className="text-sm text-muted-foreground">Nelson Mandela University â€¢ 1990 - 1993</p>
               </div>
           </CardContent>
           </Card>
@@ -600,7 +591,7 @@ export default function Home() {
             >
               <Image
                 src="/images/xematix-cognitive-publishing.webp"
-                alt="XEMATIX Cognitive Publishing — AI-Driven Content Pipeline"
+                alt="XEMATIX Cognitive Publishing â€” AI-Driven Content Pipeline"
                 width={1200}
                 height={1200}
                 className="w-full h-auto object-cover"
@@ -672,6 +663,8 @@ export default function Home() {
           </Card>
         </div>
 
+        <RelatedHubs routeKey="home" title="Follow the Core Site Spine" />
+
         {/* Social Links Footer */}
         <div className="mt-12 text-center">
           <Separator className="mb-8" />
@@ -693,10 +686,11 @@ export default function Home() {
             </Button>
           </div>
           <p className="text-sm text-muted-foreground">
-            © 2025 John Deacon. Built with Next.js and shadcn/ui.
+            Copyright 2025 John Deacon. Built with Next.js and shadcn/ui.
           </p>
         </div>
       </div>
     </div>
   );
 }
+

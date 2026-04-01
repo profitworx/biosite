@@ -8,17 +8,15 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { ExternalLink, Mail, MapPin } from "lucide-react";
-import { ThemeToggle } from "@/components/ui/theme-toggle";
-import Link from "next/link";
+import { BreadcrumbTrail } from "@/components/seo/breadcrumb-trail";
 import { JsonLd } from "@/components/seo/json-ld";
-import { collectionPageSchema, faqSchema, absoluteUrl } from "@/lib/schema";
+import { RelatedHubs } from "@/components/seo/related-hubs";
+import { buildRouteMetadata } from "@/lib/seo";
+import { collectionPageSchema, routeBreadcrumbSchema } from "@/lib/schema";
+import { ExternalLink, Mail, MapPin } from "lucide-react";
+import Link from "next/link";
 
-export const metadata = {
-  title: "Insights | Semantic Systems and Metacognitive Software | John Deacon",
-  description: "Latest articles on semantic systems, metacognitive software, XEMATIX and CAM curated from johndeacon.co.za.",
-  alternates: { canonical: absoluteUrl('/insights') },
-};
+export const metadata = buildRouteMetadata("insights");
 
 type WpRendered = { rendered: string };
 
@@ -38,16 +36,14 @@ type WpPost = {
   excerpt: WpRendered;
   content?: WpRendered;
   _embedded?: ({
-    ["wp:term"]?: Array<WpTag[]>; // array of term groups (categories, tags, etc.)
+    ["wp:term"]?: Array<WpTag[]>;
   } & Record<string, unknown>);
 };
 
 async function getPosts(): Promise<WpPost[]> {
-  const url =
-    "https://johndeacon.co.za/wp-json/wp/v2/posts?per_page=6&_embed=1";
+  const url = "https://johndeacon.co.za/wp-json/wp/v2/posts?per_page=6&_embed=1";
 
   const res = await fetch(url, {
-    // Revalidate hourly
     next: { revalidate: 3600 },
     headers: { Accept: "application/json" },
   });
@@ -61,24 +57,20 @@ async function getPosts(): Promise<WpPost[]> {
 
 function extractTags(post: WpPost): WpTag[] {
   const groups = post._embedded?.["wp:term"] ?? [];
-  // WordPress returns multiple term groups. Tags are usually the group with taxonomy === 'post_tag'.
   const tagsGroup = groups.find((group) =>
-    group.some((t) => (t as WpTag).taxonomy === "post_tag")
+    group.some((term) => (term as WpTag).taxonomy === "post_tag")
   );
   return (tagsGroup as WpTag[] | undefined) ?? [];
 }
 
 function italicLeadParagraph(html?: string): string | null {
   if (!html) return null;
-  // Remove WordPress more tag if present
+
   const cleaned = html.replace(/<!--\s*more\s*-->/gi, "");
-  // Find all paragraph blocks
   const paragraphs = cleaned.match(/<p\b[^>]*>[\s\S]*?<\/p>/gi) || [];
-  // Prefer the first paragraph containing italics (<em> or <i>)
-  const italicPara = paragraphs.find((p) => /<\s*(em|i)\b/i.test(p));
-  if (italicPara) return italicPara;
-  // Fallback: first paragraph if no italic paragraph exists
-  return paragraphs[0] ?? null;
+  const italicParagraph = paragraphs.find((paragraph) => /<\s*(em|i)\b/i.test(paragraph));
+
+  return italicParagraph ?? paragraphs[0] ?? null;
 }
 
 export default async function InsightsPage() {
@@ -87,14 +79,14 @@ export default async function InsightsPage() {
 
   try {
     posts = await getPosts();
-  } catch (e: unknown) {
-    if (e instanceof Error) {
-      error = e.message;
-    } else if (typeof e === "string") {
-      error = e;
+  } catch (issue: unknown) {
+    if (issue instanceof Error) {
+      error = issue.message;
+    } else if (typeof issue === "string") {
+      error = issue;
     } else {
       try {
-        error = JSON.stringify(e);
+        error = JSON.stringify(issue);
       } catch {
         error = "Unable to fetch posts.";
       }
@@ -102,76 +94,79 @@ export default async function InsightsPage() {
   }
 
   return (
-    <div className="container mx-auto px-4 py-8 max-w-4xl">
+    <div className="container mx-auto max-w-4xl px-4 py-8">
       <JsonLd
         id="schema-insights"
         data={[
           collectionPageSchema({
-            name: 'Insights - Latest Articles',
+            routeKey: "insights",
+            name: "Insights | Latest Articles",
             description:
-              'Latest posts curated from johndeacon.co.za on semantic systems, metacognition, and alignment frameworks.',
-            keywords: ['Insights', 'Metacognitive Software', 'Semantic Systems'],
-            url: absoluteUrl('/insights'),
+              "Latest posts curated from johndeacon.co.za on semantic systems, metacognition, and alignment frameworks.",
+            keywords: ["Insights", "Metacognitive Software", "Semantic Systems"],
           }),
-          faqSchema([
-            {
-              question: 'Where do these articles come from?',
-              answer:
-                'They are pulled from johndeacon.co.za via the WordPress REST API and presented here for quick browsing.',
-            },
-            {
-              question: 'How often is content updated?',
-              answer:
-                'The feed revalidates approximately hourly to surface the latest published posts.',
-            },
-          ]),
+          routeBreadcrumbSchema("insights"),
         ]}
       />
-      {/* Theme Toggle */}
-      <div className="flex justify-end mb-4">
-        <ThemeToggle />
-      </div>
-      {/* Profile Header */}
+
+      <BreadcrumbTrail routeKey="insights" />
+
       <div className="text-center mb-10">
-        <Avatar className="w-24 h-24 mx-auto mb-4 border-4 border-primary/20">
+        <Avatar className="mx-auto mb-4 h-24 w-24 border-4 border-primary/20">
           <AvatarImage src="/images/john_deacon_profile_2026.png" alt="John Deacon Profile" />
-          <AvatarFallback className="font-bold bg-primary/10">JD</AvatarFallback>
+          <AvatarFallback className="bg-primary/10 font-bold">JD</AvatarFallback>
         </Avatar>
-        <h1 className="text-3xl md:text-4xl font-bold mb-3 bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent" style={{lineHeight: '1.3', paddingBottom: '0.1em'}}>
-          John Deacon
+        <h1 className="mb-3 bg-gradient-to-r from-primary to-primary/60 bg-clip-text pb-[0.1em] text-3xl font-bold text-transparent md:text-4xl">
+          Insights
         </h1>
-        <p className="text-base md:text-lg text-muted-foreground mb-4 max-w-2xl mx-auto">
-          Architecting Semantic Systems | Building Tools That Align Software with Human Intention
+        <p className="mx-auto mb-4 max-w-2xl text-base text-muted-foreground md:text-lg">
+          Curated articles on semantic systems, metacognitive software, XEMATIX, and CAM from the primary publishing
+          source at johndeacon.co.za.
         </p>
-        <div className="flex flex-wrap justify-center gap-2 mb-4">
-          <Badge variant="secondary">Semantic Interface Architecture</Badge>
-          <Badge variant="secondary">Metacognitive System Design</Badge>
-          <Badge variant="secondary">Intent Modeling &amp; Alignment</Badge>
-          <Badge variant="secondary">XEMATIX Framework</Badge>
+        <div className="mb-4 flex flex-wrap justify-center gap-2">
+          <Badge variant="secondary">Semantic Systems</Badge>
+          <Badge variant="secondary">Metacognitive Software</Badge>
+          <Badge variant="secondary">XEMATIX</Badge>
+          <Badge variant="secondary">Core Alignment Model</Badge>
         </div>
-        <div className="flex justify-center items-center gap-2 text-sm text-muted-foreground mb-6">
-          <MapPin className="w-4 h-4" />
+        <div className="mb-6 flex items-center justify-center gap-2 text-sm text-muted-foreground">
+          <MapPin className="h-4 w-4" />
           <span>Kenton-on-Sea, Eastern Cape, South Africa</span>
         </div>
-        <div className="flex justify-center gap-3">
+        <div className="flex flex-wrap justify-center gap-3">
           <Button variant="default" className="gap-2" asChild>
             <a href="mailto:john@profitworx.com">
-              <Mail className="w-4 h-4" />
+              <Mail className="h-4 w-4" />
               Get In Touch
             </a>
           </Button>
           <Button variant="outline" className="gap-2" asChild>
-            <a href="/insights" target="_blank" rel="noopener noreferrer">
-              <ExternalLink className="w-4 h-4" />
-              Read Articles
+            <a href="https://johndeacon.co.za" target="_blank" rel="noopener noreferrer">
+              <ExternalLink className="h-4 w-4" />
+              Visit Full Blog
             </a>
           </Button>
         </div>
       </div>
 
+      <Card className="mb-6 border-primary/20 bg-gradient-to-br from-primary/5 via-primary/3 to-primary/5">
+        <CardContent className="p-6 text-sm text-muted-foreground">
+          This page is a curated discovery hub. Full article authority stays on{" "}
+          <a
+            href="https://johndeacon.co.za"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-medium text-foreground underline underline-offset-4"
+          >
+            johndeacon.co.za
+          </a>
+          , while this site focuses on entity clarity, framework discovery, and conversion intent.
+        </CardContent>
+      </Card>
+
       <div className="mb-6">
         <h2 className="text-2xl font-semibold">Latest Insights</h2>
-        <p className="text-muted-foreground">Six most recent posts</p>
+        <p className="text-muted-foreground">Six most recent posts, refreshed approximately hourly.</p>
       </div>
 
       {error ? (
@@ -182,23 +177,20 @@ export default async function InsightsPage() {
           </CardHeader>
           <CardContent>
             <Button asChild variant="outline">
-              <a
-                href="https://johndeacon.co.za"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a href="https://johndeacon.co.za" target="_blank" rel="noopener noreferrer">
                 Visit Blog
               </a>
             </Button>
           </CardContent>
         </Card>
       ) : (
-        <div className="grid gap-6 md:grid-cols-2 auto-rows-fr">
+        <div className="grid auto-rows-fr gap-6 md:grid-cols-2">
           {posts.map((post) => {
             const tags = extractTags(post);
-            const firstPara = italicLeadParagraph(post.content?.rendered);
+            const firstParagraph = italicLeadParagraph(post.content?.rendered);
+
             return (
-              <Card key={post.id} className="h-full flex flex-col border-primary/10">
+              <Card key={post.id} className="flex h-full flex-col border-primary/10">
                 <CardHeader>
                   <CardTitle className="leading-snug">
                     <a
@@ -209,46 +201,34 @@ export default async function InsightsPage() {
                       dangerouslySetInnerHTML={{ __html: post.title.rendered }}
                     />
                   </CardTitle>
-                  <CardDescription>
-                    {new Date(post.date).toLocaleDateString()}
-                  </CardDescription>
+                  <CardDescription>{new Date(post.date).toLocaleDateString()}</CardDescription>
                 </CardHeader>
-                <CardContent className="flex-1 flex flex-col space-y-3">
-                  {firstPara ? (
+                <CardContent className="flex flex-1 flex-col space-y-3">
+                  {firstParagraph ? (
                     <div
-                      className="prose dark:prose-invert max-w-none text-sm text-muted-foreground"
-                      dangerouslySetInnerHTML={{ __html: firstPara }}
+                      className="prose max-w-none text-sm text-muted-foreground dark:prose-invert"
+                      dangerouslySetInnerHTML={{ __html: firstParagraph }}
                     />
                   ) : (
                     <div
-                      className="prose dark:prose-invert max-w-none text-sm text-muted-foreground"
-                      // WordPress provides sanitized HTML excerpts; render as provided
+                      className="prose max-w-none text-sm text-muted-foreground dark:prose-invert"
                       dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }}
                     />
                   )}
-                  {tags.length > 0 && (
+                  {tags.length > 0 ? (
                     <div className="flex flex-wrap gap-2 pt-1">
                       {tags.slice(0, 3).map((tag) => (
                         <Badge key={tag.id} variant="secondary" asChild>
-                          <a
-                            href={tag.link}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            title={tag.name}
-                          >
+                          <a href={tag.link} target="_blank" rel="noopener noreferrer" title={tag.name}>
                             #{tag.name}
                           </a>
                         </Badge>
                       ))}
                     </div>
-                  )}
+                  ) : null}
                   <div className="mt-auto">
-          <Button variant="link" className="p-0 h-auto" asChild>
-                      <a
-                        href={post.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
+                    <Button variant="link" className="h-auto p-0" asChild>
+                      <a href={post.link} target="_blank" rel="noopener noreferrer">
                         Read on Blog &rarr;
                       </a>
                     </Button>
@@ -260,11 +240,9 @@ export default async function InsightsPage() {
         </div>
       )}
 
-      <div className="mt-10 flex items-center justify-between flex-wrap gap-3">
+      <div className="mt-10 flex flex-wrap items-center justify-between gap-3">
         <Button asChild variant="ghost" className="gap-2">
-          <Link href="/">{/* internal navigation */}
-            ← Back to Home
-          </Link>
+          <Link href="/">Back to Home</Link>
         </Button>
 
         <a
@@ -273,9 +251,11 @@ export default async function InsightsPage() {
           rel="noopener noreferrer"
           className="text-sm text-muted-foreground hover:underline"
         >
-          Visit full blog on johndeacon.co.za ↗
+          Visit full blog on johndeacon.co.za
         </a>
       </div>
+
+      <RelatedHubs routeKey="insights" />
     </div>
   );
 }

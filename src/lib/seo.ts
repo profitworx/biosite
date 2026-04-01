@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { absoluteUrl } from "./schema";
+import { DEFAULT_OG_IMAGE, SITE_LOCALE, SITE_NAME, absoluteUrl, getPublicRoute, type PublicRouteKey } from "./site";
 
 export const BASE_KEYWORDS: string[] = [
   "John Deacon",
@@ -14,19 +14,13 @@ export const BASE_KEYWORDS: string[] = [
   "Digital Business Strategy",
 ];
 
-const DEFAULT_OG_IMAGE = {
-  url: "/images/john_deacon_presentation.jpg",
-  width: 1200,
-  height: 630,
-  alt: "John Deacon",
-};
-
 type BuildPageMetadataArgs = {
   path: string;
   title: string;
   description: string;
   keywords?: string[];
   type?: "website" | "article" | "profile";
+  imagePath?: string;
 };
 
 export function buildPageMetadata({
@@ -35,9 +29,11 @@ export function buildPageMetadata({
   description,
   keywords = [],
   type = "website",
+  imagePath = DEFAULT_OG_IMAGE.path,
 }: BuildPageMetadataArgs): Metadata {
   const url = absoluteUrl(path);
   const mergedKeywords = Array.from(new Set([...BASE_KEYWORDS, ...keywords]));
+  const imageUrl = absoluteUrl(imagePath);
 
   return {
     title,
@@ -46,17 +42,37 @@ export function buildPageMetadata({
     openGraph: {
       type,
       url,
-      siteName: "John Deacon Bio",
+      siteName: SITE_NAME,
       title,
       description,
-      images: [DEFAULT_OG_IMAGE],
+      locale: SITE_LOCALE,
+      images: [
+        {
+          url: imageUrl,
+          width: DEFAULT_OG_IMAGE.width,
+          height: DEFAULT_OG_IMAGE.height,
+          alt: DEFAULT_OG_IMAGE.alt,
+        },
+      ],
     },
     twitter: {
       card: "summary_large_image",
+      creator: "@jdeaconx",
       title,
       description,
-      images: [DEFAULT_OG_IMAGE.url],
+      images: [imageUrl],
     },
     keywords: mergedKeywords,
   };
+}
+
+export function buildRouteMetadata(routeKey: PublicRouteKey): Metadata {
+  const route = getPublicRoute(routeKey);
+  return buildPageMetadata({
+    path: route.path,
+    title: route.title,
+    description: route.description,
+    keywords: route.keywords,
+    type: route.metadataType,
+  });
 }

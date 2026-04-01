@@ -3,32 +3,21 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
-import { ThemeToggle } from "@/components/ui/theme-toggle";
+import { BreadcrumbTrail } from "@/components/seo/breadcrumb-trail";
 import { JsonLd } from "@/components/seo/json-ld";
-import { buildPageMetadata } from "@/lib/seo";
-import { creativeWorkSchema, faqSchema, absoluteUrl } from "@/lib/schema";
+import { RelatedHubs } from "@/components/seo/related-hubs";
+import { buildRouteMetadata } from "@/lib/seo";
+import { creativeWorkSchema, pageSchema, routeBreadcrumbSchema, absoluteUrl } from "@/lib/schema";
 import { getDeclaredAiModels } from "@/lib/llms";
+import { getPageId } from "@/lib/site";
 import { ArrowLeft, ExternalLink } from "lucide-react";
 import Link from "next/link";
 
 import type { Metadata } from "next";
 
-export const metadata: Metadata = buildPageMetadata({
-  path: "/xematix",
-  title: "XEMATIX: The Architecture of Intent",
-  description:
-    "A pre-execution semantic control layer that governs intent lineage, meaning integrity, and authorization before autonomous execution.",
-  keywords: [
-    "Pre-execution Semantic Control",
-    "Semantic Control Layer",
-    "XSALF",
-    "Abstract Language Objects",
-    "AI Governance",
-    "Semantic Drift",
-    "Intent Lineage",
-    "Core Alignment Model",
-  ],
-});
+export const metadata: Metadata = buildRouteMetadata("xematix");
+
+const xematixWorkId = absoluteUrl("/xematix#creative-work");
 
 export default function XematixPage() {
   const aiModels = getDeclaredAiModels();
@@ -39,7 +28,13 @@ export default function XematixPage() {
         <JsonLd
           id="schema-xematix"
           data={[
+            pageSchema({
+              routeKey: "xematix",
+              mainEntityId: xematixWorkId,
+            }),
+            routeBreadcrumbSchema("xematix"),
             creativeWorkSchema({
+              id: xematixWorkId,
               name: "XEMATIX: The Architecture of Intent",
               description:
                 "A pre-execution semantic control layer that governs how human intent becomes authorized machine action.",
@@ -53,35 +48,10 @@ export default function XematixPage() {
                 "AI Governance",
               ],
               url: absoluteUrl("/xematix"),
+              isPartOfId: getPageId("xematix"),
             }),
-            faqSchema([
-              {
-                question: "What is XEMATIX?",
-                answer:
-                  "XEMATIX is a pre-execution semantic control system that binds human intent to machine execution through traceable intent lineage and meaning integrity checks.",
-              },
-              {
-                question: "How does XEMATIX relate to CAM and ALOs?",
-                answer:
-                  "CAM provides an intent hierarchy (Anchor, Projection, Pathway, Actuator, Governor), while Abstract Language Objects (ALOs) store living knowledge linked to that intent structure.",
-              },
-              {
-                question: "What is XSALF?",
-                answer:
-                  "XSALF (XEMATIX Semantic Alignment Loss Function) measures meaning integrity before execution, allowing actions to be blocked or degraded if they drift from original purpose.",
-              },
-              {
-                question: "Which LLMs does XEMATIX use?",
-                answer:
-                  "XEMATIX is model-agnostic; this site publishes a discovery manifest at /llms.txt that includes the currently declared models and integration context.",
-              },
-            ]),
           ]}
         />
-
-        <div className="flex justify-end mb-4">
-          <ThemeToggle />
-        </div>
 
         <div className="mb-8">
           <Button variant="ghost" asChild className="gap-2">
@@ -91,6 +61,8 @@ export default function XematixPage() {
             </Link>
           </Button>
         </div>
+
+        <BreadcrumbTrail routeKey="xematix" />
 
         <div className="text-center mb-12">
           <h1 className="text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
@@ -294,6 +266,8 @@ export default function XematixPage() {
             </div>
           </CardContent>
         </Card>
+
+        <RelatedHubs routeKey="xematix" />
 
         <div className="mt-12 text-center">
           <Separator className="mb-8" />
